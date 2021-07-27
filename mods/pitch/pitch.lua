@@ -53,7 +53,7 @@ minetest.register_node("pitch:pitch_source", {
 	liquid_range = 0,
 	damage_per_second = 8,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
-	groups = {liquid = 3},
+	groups = {liquid = 2},
 })
 
 minetest.register_node("pitch:pitch_flowing", {
@@ -100,7 +100,7 @@ minetest.register_node("pitch:pitch_flowing", {
 	liquid_range = 1,
 	damage_per_second = 8,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
-	groups = {liquid = 3, not_in_creative_inventory = 1},
+	groups = {liquid = 2, not_in_creative_inventory = 1},
 })
 
 minetest.register_node("pitch:pitch", {
@@ -185,5 +185,11 @@ minetest.register_node("pitch:stone_with_pitch", {
 minetest.register_craftitem("pitch:pitch_lump", {
 	description = "Lump of Pitch-infused Coal",
 	inventory_image = "pitch_lump.png",
+	groups = {flammable = 1}
+})
+
+minetest.register_craftitem("pitch:pitch_dust", {
+	description = "Pitch-infused Coal Dust",
+	inventory_image = "pitch_powder.png",
 	groups = {flammable = 1}
 })

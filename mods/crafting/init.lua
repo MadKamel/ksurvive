@@ -3,6 +3,13 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "pitch:pitch_dust",
+	recipe = {
+		{"pitch:pitch_lump", "pitch:pitch_lump"}
+	}
+})
+
+minetest.register_craft({
 	output = "adze:adze",
 	recipe = {
 		{"default:stick", "default:stick"},
@@ -71,7 +78,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "concrete:concrete_base 4",
+	output = "concrete:concrete_base 8",
 	recipe = {
 		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
 		{"default:sand","default:sand","default:sand"}
@@ -79,7 +86,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "concrete:stone_base 4",
+	output = "concrete:stone_base 8",
 	recipe = {
 		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
 		{"default:gravel","default:cobble","default:gravel"}
@@ -87,7 +94,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "concrete:desert_stone_base 4",
+	output = "concrete:desert_stone_base 8",
 	recipe = {
 		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
 		{"default:gravel","default:desert_cobble","default:gravel"}
