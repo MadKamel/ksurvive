@@ -109,3 +109,81 @@ minetest.register_node("pitch:pitch", {
 	groups = {crumbly = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
+
+minetest.register_node("pitch:stone", {
+	description = "Pitch-infused Stone",
+	tiles = {"pitch_stone.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "default:cobble",
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("pitch:desert_stone", {
+	description = "Pitch-infused Desert Stone",
+	tiles = {"pitch_desert_stone.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "default:desert_cobble",
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_abm({
+	neighbors = {"pitch:pitch_source", "pitch:pitch_flowing"},
+	nodenames = {"default:stone"},
+	interval = 1,
+	chance = 6,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "pitch:stone"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"pitch:pitch_source", "pitch:pitch_flowing"},
+	nodenames = {"default:desert_stone"},
+	interval = 1,
+	chance = 6,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "pitch:desert_stone"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"pitch:pitch_source", "pitch:pitch_flowing"},
+	nodenames = {"default:stone_with_coal"},
+	interval = 1,
+	chance = 10,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "pitch:stone_with_pitch"})
+	end
+})
+
+minetest.register_node("pitch:stone_with_pitch", {
+	description = "Pitch-infused Coal Ore",
+	tiles = {"pitch_stone.png^pitch_mineral.png"},
+	groups = {cracky = 3},
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				items = {'pitch:pitch_lump 3'},
+				rarity = 6,
+			},
+			{
+				items = {'pitch:pitch_lump 2'},
+				rarity = 4,
+			},
+			{
+				items = {'pitch:pitch_lump'}
+			},
+		},
+	},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craftitem("pitch:pitch_lump", {
+	description = "Lump of Pitch-infused Coal",
+	inventory_image = "pitch_lump.png",
+	groups = {flammable = 1}
+})

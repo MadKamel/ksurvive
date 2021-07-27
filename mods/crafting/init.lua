@@ -6,8 +6,8 @@ minetest.register_craft({
 	output = "adze:adze",
 	recipe = {
 		{"default:stick", "default:stick"},
-		{"default:stick", ""},
-		{"default:stick", ""}
+		{"", "default:stick"},
+		{"", "default:stick"}
 	}
 })
 
