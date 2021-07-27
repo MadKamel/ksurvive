@@ -1,7 +1,7 @@
 bucket.register_liquid(
 	"pitch:pitch_source",
 	"pitch:pitch_flowing",
-	"pitch:pitch",
+	"pitch:pitch_bucket",
 	"bucket_pitch.png",
 	"Wooden Bucket with Pitch",
 	{tool = 1}
