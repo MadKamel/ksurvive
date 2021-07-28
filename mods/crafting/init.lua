@@ -3,9 +3,30 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "letters:papyrus_bundle 4",
+	recipe = {
+		{"default:papyrus"}
+	}
+})
+
+minetest.register_craft({
 	output = "pitch:pitch_dust",
 	recipe = {
 		{"pitch:pitch_lump", "pitch:pitch_lump"}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:letter_empty",
+	recipe = {
+		{"letters:pen", "default:paper"}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:letter_empty",
+	recipe = {
+		{"default:paper", "letters:pen"}
 	}
 })
 
