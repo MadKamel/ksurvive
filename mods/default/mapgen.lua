@@ -134,7 +134,7 @@ function default.register_mgv6_ores()
 		},
 	})
 
-	-- Scatter ores
+
 
 	-- Pitch (ksurvive)
 
@@ -147,6 +147,18 @@ function default.register_mgv6_ores()
 		y_max           = 31000,
 		y_min           = -15
 	})
+
+	minetest.register_ore({
+		ore_type        = "blob",
+		ore             = "default:lava_source",
+		wherein         = {"default:stone", "default:desert_stone", "default:gravel"},
+		clust_scarcity  = 8 * 8 * 8,
+		clust_size      = 1,
+		y_max           = -35,
+		y_min           = -31000
+	})
+
+	-- Scatter ores
 
 
 	-- Coal
