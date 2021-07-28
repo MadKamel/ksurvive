@@ -10,6 +10,33 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "letters:pen",
+	recipe = {
+		{"default:stick"},
+		{"letters:inkwell_full"}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:inkwell_full",
+	recipe = {
+		{"pitch:pitch_dust"},
+		{"bucket:bucket_water"},
+		{"letters:inkwell"}
+	},
+	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}}
+})
+
+minetest.register_craft({
+	output = "letters:inkwell",
+	recipe = {
+		{"glass:glass_clear", "", "glass:glass_clear"},
+		{"glass:glass_clear", "", "glass:glass_clear"},
+		{"", "glass:glass_clear", ""}
+	}
+})
+
+minetest.register_craft({
 	output = "adze:adze",
 	recipe = {
 		{"default:stick", "default:stick"},
