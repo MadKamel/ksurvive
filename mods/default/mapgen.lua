@@ -152,8 +152,8 @@ function default.register_mgv6_ores()
 		ore_type        = "blob",
 		ore             = "default:lava_source",
 		wherein         = {"default:stone", "default:desert_stone", "default:gravel"},
-		clust_scarcity  = 8 * 8 * 8,
-		clust_size      = 1,
+		clust_scarcity  = 2 * 2 * 2,
+		clust_size      = 3,
 		y_max           = -35,
 		y_min           = -31000
 	})

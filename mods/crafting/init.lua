@@ -3,6 +3,46 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "metals:pick_head_copper",
+	recipe = {
+		{"metals:copper_block","metals:copper_block","metals:copper_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:pick_head_iron",
+	recipe = {
+		{"metals:iron_block","metals:iron_block","metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:raw_copper_block",
+	recipe = {
+		{"default:copper_lump","default:copper_lump","default:copper_lump"},
+		{"default:copper_lump","default:copper_lump","default:copper_lump"},
+		{"default:copper_lump","default:copper_lump","default:copper_lump"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hematite_block",
+	recipe = {
+		{"default:iron_lump","default:iron_lump","default:iron_lump"},
+		{"default:iron_lump","default:iron_lump","default:iron_lump"},
+		{"default:iron_lump","default:iron_lump","default:iron_lump"}
+	}
+})
+
+--minetest.register_craft({
+--	output = "cactus:cactus_pulp",
+--	recipe = {
+--		{"rocks:rock", "default:cactus"}
+--	},
+--	type = "shapeless"
+--})
+
+minetest.register_craft({
 	output = "letters:framed_papyrus_block",
 	recipe = {
 		{"","default:stick",""},
