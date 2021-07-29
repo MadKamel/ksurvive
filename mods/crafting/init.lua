@@ -3,9 +3,57 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "letters:framed_papyrus_block",
+	recipe = {
+		{"","default:stick",""},
+		{"default:stick","letters:lined_papyrus_block","default:stick"},
+		{"","default:stick",""}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:lined_papyrus_block",
+	recipe = {
+		{"","default:stick",""},
+		{"default:stick","letters:papyrus_block","default:stick"},
+		{"","default:stick",""}
+	}
+})
+
+minetest.register_craft({
+	output = "default:paper 2",
+	recipe = {
+		{"letters:papyrus_bundle", "letters:papyrus_bundle", "letters:papyrus_bundle"},
+	}
+})
+
+minetest.register_craft({
 	output = "letters:papyrus_bundle 4",
 	recipe = {
 		{"default:papyrus"}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:papyrus_block",
+	recipe = {
+		{"letters:papyrus_bundle","letters:papyrus_bundle","letters:papyrus_bundle"},
+		{"letters:papyrus_bundle","letters:papyrus_bundle","letters:papyrus_bundle"},
+		{"letters:papyrus_bundle","letters:papyrus_bundle","letters:papyrus_bundle"}
+	}
+})
+
+minetest.register_craft({
+	output = "default:stick 2",
+	recipe = {
+		{"letters:papyrus_bundle"}
+	}
+})
+
+minetest.register_craft({
+	output = "letters:papyrus_bundle 9",
+	recipe = {
+		{"letters:papyrus_block"}
 	}
 })
 
@@ -35,7 +83,8 @@ minetest.register_craft({
 	recipe = {
 		{"default:stick"},
 		{"letters:inkwell_full"}
-	}
+	},
+	replacements = {{"letters:inkwell_full", "letters:inkwell"}}
 })
 
 minetest.register_craft({

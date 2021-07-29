@@ -142,13 +142,13 @@ minetest.register_lbm({
 	end
 })
 
-minetest.register_craft({
-	output = "default:torch 4",
-	recipe = {
-		{"default:coal_lump"},
-		{"group:stick"},
-	}
-})
+--minetest.register_craft({
+--	output = "default:torch 4",
+--	recipe = {
+--		{"default:coal_lump"},
+--		{"group:stick"},
+--	}
+--})
 
 minetest.register_craft({
 	type = "fuel",

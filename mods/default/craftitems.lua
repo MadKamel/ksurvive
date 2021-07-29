@@ -422,13 +422,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:paper",
-	recipe = {
-		{"default:papyrus", "default:papyrus", "default:papyrus"},
-	}
-})
-
-minetest.register_craft({
 	output = "default:skeleton_key",
 	recipe = {
 		{"default:gold_ingot"},
