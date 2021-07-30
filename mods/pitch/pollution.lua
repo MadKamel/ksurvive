@@ -3,7 +3,7 @@ bucket.register_liquid(
 	"pitch:polluted_water_flowing",
 	"pitch:polluted_water_bucket",
 	"bucket_pollution.png",
-	"Wooden Bucket with Pitch-polluted Water",
+	"Wooden Bucket with Pitch-Polluted Water",
 	{tool = 1}
 )
 
@@ -123,7 +123,18 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"pitch:polluted_water_source"},
 	interval = 0.05,
-	chance = 1,
+	chance = 10,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "default:water_source"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"pitch:polluted_water_flowing"},
+	nodenames = {"pitch:polluted_water_source"},
+	interval = 0.05,
+	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "default:water_source"})

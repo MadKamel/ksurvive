@@ -3,6 +3,47 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "metals:crowbar_copper",
+	recipe = {
+		{"metals:copper_stick", "metals:copper_stick"},
+		{"", "metals:copper_stick"},
+		{"", "metals:copper_stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:crowbar_iron",
+	recipe = {
+		{"metals:iron_stick", "metals:iron_stick"},
+		{"", "metals:iron_stick"},
+		{"", "metals:iron_stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:copper_stick 8",
+	recipe = {
+		{"metals:copper_block"},
+		{"metals:copper_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:iron_stick 8",
+	recipe = {
+		{"metals:iron_block"},
+		{"metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:shovel_head_copper",
+	recipe = {
+		{"metals:copper_block"}
+	}
+})
+
+minetest.register_craft({
 	output = "metals:pick_head_copper",
 	recipe = {
 		{"metals:copper_block","metals:copper_block","metals:copper_block"}
@@ -10,9 +51,138 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "metals:axe_head_copper",
+	recipe = {
+		{"metals:copper_block","metals:copper_block"},
+		{"metals:copper_block",""}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:sword_head_copper",
+	recipe = {
+		{"","metals:copper_block",""},
+		{"","metals:copper_block",""},
+		{"metals:copper_block","","metals:copper_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_head_copper",
+	recipe = {
+		{"metals:copper_block","metals:copper_block","metals:copper_block"},
+		{"metals:copper_block","metals:copper_block","metals:copper_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:shovel_head_iron",
+	recipe = {
+		{"metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
 	output = "metals:pick_head_iron",
 	recipe = {
 		{"metals:iron_block","metals:iron_block","metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:axe_head_iron",
+	recipe = {
+		{"metals:iron_block","metals:iron_block"},
+		{"metals:iron_block",""}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:sword_head_iron",
+	recipe = {
+		{"","metals:iron_block",""},
+		{"","metals:iron_block",""},
+		{"metals:iron_block","","metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_head_iron",
+	recipe = {
+		{"metals:iron_block","metals:iron_block","metals:iron_block"},
+		{"metals:iron_block","metals:iron_block","metals:iron_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_iron",
+	recipe = {
+		{"metals:hammer_head_iron"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_copper",
+	recipe = {
+		{"metals:hammer_head_copper"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:pickaxe_iron",
+	recipe = {
+		{"metals:pickaxe_head_iron"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:pickaxe_copper",
+	recipe = {
+		{"metals:pickaxe_head_copper"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:shovel_iron",
+	recipe = {
+		{"metals:shovel_head_iron"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:shovel_copper",
+	recipe = {
+		{"metals:shovel_head_copper"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:axe_iron",
+	recipe = {
+		{"metals:axe_head_iron"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:axe_copper",
+	recipe = {
+		{"metals:axe_head_copper"},
+		{"default:stick"},
+		{"default:stick"}
 	}
 })
 
@@ -352,7 +522,7 @@ minetest.register_craft({
 	recipe = {
 		{"", "rocks:sharpened_rock", ""},
 		{"", "rocks:sharpened_rock", ""},
-		{"", "default:stick", ""}
+		{"rocks:rock", "default:stick", "rocks:rock"}
 	}
 })
 

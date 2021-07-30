@@ -370,11 +370,11 @@ minetest.register_node("default:furnace_active", {
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
 })
 
-minetest.register_craft({
-	output = "default:furnace",
-	recipe = {
-		{"group:stone", "group:stone", "group:stone"},
-		{"group:stone", "", "group:stone"},
-		{"group:stone", "group:stone", "group:stone"},
-	}
-})
+--minetest.register_craft({
+--	output = "default:furnace",
+--	recipe = {
+--		{"group:stone", "group:stone", "group:stone"},
+--		{"group:stone", "", "group:stone"},
+--		{"group:stone", "group:stone", "group:stone"},
+--	}
+--})

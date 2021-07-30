@@ -19,7 +19,7 @@ minetest.register_node("glass:glass_clear", {
 	paramtype = "light",
 	paramtype2 = "glasslikeliquidlevel",
 	sunlight_propagates = true,
-	groups = {cracky = 3},
+	groups = {cracky = 3, smashy = 3},
 	drop = "glass:glass_clear",
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -32,6 +32,6 @@ minetest.register_node("glass:glass_blackened", {
 	paramtype = "light",
 	paramtype2 = "glasslikeliquidlevel",
 	sunlight_propagates = true,
-	groups = {cracky = 2},
+	groups = {cracky = 1, smashy = 2},
 	sounds = default.node_sound_glass_defaults(),
 })
