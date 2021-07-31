@@ -3,7 +3,7 @@ minetest.register_craftitem("letters:letter", {
 	inventory_image = "letter.png",
 	stack_max = 1,
 	groups = {flammable = 1, book = 1},
-	on_use = book_on_use,
+	-- on_use = book_on_use,
 })
 
 minetest.register_craftitem("letters:letter_empty", {

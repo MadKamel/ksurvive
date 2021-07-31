@@ -112,8 +112,8 @@ minetest.register_abm({
 minetest.register_abm({
 	neighbors = {"pitch:polluted_water_source", "pitch:polluted_water_flowing"},
 	nodenames = {"default:water_source"},
-	interval = 1,
-	chance = 100,
+	interval = 10,
+	chance = 25,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "pitch:polluted_water_source"})
@@ -121,19 +121,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
+	neighbors = {"default:water_source", "default:water_flowing"},
 	nodenames = {"pitch:polluted_water_source"},
-	interval = 0.05,
-	chance = 10,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "default:water_source"})
-	end
-})
-
-minetest.register_abm({
-	neighbors = {"pitch:polluted_water_flowing"},
-	nodenames = {"pitch:polluted_water_source"},
-	interval = 0.05,
+	interval = 10,
 	chance = 5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}

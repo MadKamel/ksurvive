@@ -31,6 +31,21 @@ minetest.register_tool("metals:pick_copper", {
 	groups = {}
 })
 
+minetest.register_tool("metals:pick_tin", {
+	description = "Wrought Tin Pickaxe",
+	inventory_image = "tool_tin_pick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			cracky = {times={[1]=3.50, [2]=1.75, [3]=1.25}, uses=80, maxlevel=2},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
 
 -- Shovels
 
@@ -60,6 +75,22 @@ minetest.register_tool("metals:shovel_copper", {
 		max_drop_level=1,
 		groupcaps={
 			crumbly = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=60, maxlevel=2},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:shovel_tin", {
+	description = "Wrought Tin Shovel",
+	inventory_image = "tool_tin_shovel.png",
+	wield_image = "tool_tin_shovel.png^[transformR90",
+	tool_capabilities = {
+		full_punch_interval = 1.1,
+		max_drop_level=1,
+		groupcaps={
+			crumbly = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=100, maxlevel=2},
 		},
 		damage_groups = {fleshy=2},
 	},
@@ -103,6 +134,38 @@ minetest.register_tool("metals:hammer_copper", {
 	groups = {}
 })
 
+minetest.register_tool("metals:hammer_copper", {
+	description = "Wrought Copper Hammer",
+	inventory_image = "tool_copper_hammer.png",
+	wield_image = "tool_copper_hammer.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		damage_groups = {fleshy=5},
+		groupcaps={
+			smashy = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=75, maxlevel=2},
+		},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:hammer_tin", {
+	description = "Wrought Tin Hammer",
+	inventory_image = "tool_tin_hammer.png",
+	wield_image = "tool_tin_hammer.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		damage_groups = {fleshy=5},
+		groupcaps={
+			smashy = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=125, maxlevel=2},
+		},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
 
 -- Axes
 
@@ -116,7 +179,7 @@ minetest.register_tool("metals:axe_iron", {
 		groupcaps={
 			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
 		},
-		damage_groups = {fleshy=4},
+		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}
@@ -131,7 +194,22 @@ minetest.register_tool("metals:axe_copper", {
 		groupcaps={
 			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=50, maxlevel=2},
 		},
-		damage_groups = {fleshy=4},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:axe_tin", {
+	description = "Wrought Tin Axe",
+	inventory_image = "tool_tin_axe.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=80, maxlevel=2},
+		},
+		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}
@@ -174,6 +252,124 @@ minetest.register_tool("metals:crowbar_copper", {
 			cracky = {times={[2]=2.25, [3]=1.10}, uses=100, maxlevel=1}
 		},
 		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:crowbar_tin", {
+	description = "Wrought Tin Crowbar",
+	inventory_image = "tool_tin_crowbar.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			crumbly = {times={[1]=2.20, [2]=0.80, [3]=0.30}, uses=125, maxlevel=1},
+			choppy = {times={[2]=1.05, [3]=0.50}, uses=125, maxlevel=1},
+			snappy = {times={[2]=0.75, [3]=0.15}, uses=125, maxlevel=1},
+			cracky = {times={[2]=2.25, [3]=1.10}, uses=125, maxlevel=1}
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+
+
+
+-- Swords
+
+
+
+minetest.register_tool("metals:sword_iron", {
+	description = "Wrought Iron Sword",
+	inventory_image = "tool_iron_sword.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[2]=0.50, [3]=0.15}, uses=75, maxlevel=1}
+		},
+		damage_groups = {fleshy=5},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:sword_copper", {
+	description = "Wrought Copper Sword",
+	inventory_image = "tool_copper_sword.png",
+	tool_capabilities = {
+		full_punch_interval = 0.8,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[2]=0.50, [3]=0.15}, uses=125, maxlevel=1}
+		},
+		damage_groups = {fleshy=5},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:sword_tin", {
+	description = "Wrought Tin Sword",
+	inventory_image = "tool_tin_sword.png",
+	tool_capabilities = {
+		full_punch_interval = 0.4,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[2]=0.50, [3]=0.15}, uses=175, maxlevel=1}
+		},
+		damage_groups = {fleshy=5},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+
+-- SCYTHES
+
+minetest.register_tool("metals:scythe_iron", {
+	description = "Wrought Iron Scythe",
+	inventory_image = "tool_iron_scythe.png",
+	tool_capabilities = {
+		full_punch_interval = 2,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=50, maxlevel=1}
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:scythe_copper", {
+	description = "Wrought Copper Scythe",
+	inventory_image = "tool_copper_scythe.png",
+	tool_capabilities = {
+		full_punch_interval = 1,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=175, maxlevel=1}
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:scythe_tin", {
+	description = "Wrought Tin Scythe",
+	inventory_image = "tool_tin_scyth.png",
+	tool_capabilities = {
+		full_punch_interval = 0.4,
+		max_drop_level=1,
+		groupcaps={
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=175, maxlevel=1}
+		},
+		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}

@@ -9,3 +9,9 @@ minetest.register_node("metals:raw_copper_block", {
 	tiles = {"copper_raw.png"},
 	groups = {cracky = 3},
 })
+
+minetest.register_node("metals:raw_tin_block", {
+	description = "Raw Tin Block",
+	tiles = {"tin_raw.png"},
+	groups = {cracky = 3},
+})

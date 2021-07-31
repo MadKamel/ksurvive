@@ -21,3 +21,15 @@ minetest.register_node("metals:glowing_copper_block", {
 	tiles = {"glowing_copper.png"},
 	groups = {cracky = 2},
 })
+
+minetest.register_node("metals:tin_block", {
+	description = "Block of Refined Tin",
+	tiles = {"tin_block.png"},
+	groups = {cracky = 2},
+})
+
+minetest.register_node("metals:glowing_tin_block", {
+	description = "Block of Hot Tin",
+	tiles = {"glowing_tin.png"},
+	groups = {cracky = 2},
+})
