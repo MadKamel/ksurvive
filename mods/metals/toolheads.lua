@@ -8,6 +8,11 @@ minetest.register_craftitem("metals:pick_head_iron", {
 	inventory_image = "toolhead_iron_pick.png"
 })
 
+minetest.register_craftitem("metals:pick_head_tin", {
+	description = "Wrought Tin Pickaxe Head",
+	inventory_image = "toolhead_tin_pick.png"
+})
+
 
 
 minetest.register_craftitem("metals:shovel_head_copper", {
@@ -18,6 +23,11 @@ minetest.register_craftitem("metals:shovel_head_copper", {
 minetest.register_craftitem("metals:shovel_head_iron", {
 	description = "Wrought Iron Shovel Head",
 	inventory_image = "toolhead_iron_shovel.png"
+})
+
+minetest.register_craftitem("metals:shovel_head_tin", {
+	description = "Wrought Tin Shovel Head",
+	inventory_image = "toolhead_tin_shovel.png"
 })
 
 
@@ -32,6 +42,11 @@ minetest.register_craftitem("metals:axe_head_iron", {
 	inventory_image = "toolhead_iron_axe.png"
 })
 
+minetest.register_craftitem("metals:axe_head_tin", {
+	description = "Wrought Tin Axe Head",
+	inventory_image = "toolhead_tin_axe.png"
+})
+
 
 
 minetest.register_craftitem("metals:hammer_head_copper", {
@@ -42,6 +57,11 @@ minetest.register_craftitem("metals:hammer_head_copper", {
 minetest.register_craftitem("metals:hammer_head_iron", {
 	description = "Wrought Iron Hammer Head",
 	inventory_image = "toolhead_iron_hammer.png"
+})
+
+minetest.register_craftitem("metals:hammer_head_tin", {
+	description = "Wrought Tin Hammer Head",
+	inventory_image = "toolhead_tin_hammer.png"
 })
 
 
@@ -56,6 +76,11 @@ minetest.register_craftitem("metals:sword_head_iron", {
 	inventory_image = "toolhead_iron_sword.png"
 })
 
+minetest.register_craftitem("metals:sword_head_tin", {
+	description = "Wrought Tin Sword Blade",
+	inventory_image = "toolhead_tin_sword.png"
+})
+
 
 
 minetest.register_craftitem("metals:copper_stick", {
@@ -66,4 +91,9 @@ minetest.register_craftitem("metals:copper_stick", {
 minetest.register_craftitem("metals:iron_stick", {
 	description = "Wrought Iron Stick",
 	inventory_image = "iron_stick.png"
+})
+
+minetest.register_craftitem("metals:tin_stick", {
+	description = "Wrought Tin Stick",
+	inventory_image = "tin_stick.png"
 })

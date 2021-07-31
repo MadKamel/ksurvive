@@ -362,7 +362,7 @@ minetest.register_tool("metals:scythe_copper", {
 
 minetest.register_tool("metals:scythe_tin", {
 	description = "Wrought Tin Scythe",
-	inventory_image = "tool_tin_scyth.png",
+	inventory_image = "tool_tin_scythe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.4,
 		max_drop_level=1,

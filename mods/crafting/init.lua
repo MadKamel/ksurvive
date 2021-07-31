@@ -97,6 +97,45 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "metals:shovel_head_tin",
+	recipe = {
+		{"metals:tin_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:pick_head_tin 3",
+	recipe = {
+		{"metals:tin_block","metals:tin_block","metals:tin_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:axe_head_tin 3",
+	recipe = {
+		{"metals:tin_block","metals:tin_block"},
+		{"metals:tin_block",""}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:sword_head_tin 4",
+	recipe = {
+		{"","metals:tin_block",""},
+		{"","metals:tin_block",""},
+		{"metals:tin_block","","metals:tin_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_head_tin 6",
+	recipe = {
+		{"metals:tin_block","metals:tin_block","metals:tin_block"},
+		{"metals:tin_block","metals:tin_block","metals:tin_block"}
+	}
+})
+
+minetest.register_craft({
 	output = "metals:shovel_head_copper",
 	recipe = {
 		{"metals:copper_block"}
@@ -184,9 +223,9 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "metals:hammer_copper",
+	output = "metals:pick_iron",
 	recipe = {
-		{"metals:hammer_head_copper"},
+		{"metals:pick_head_iron"},
 		{"default:stick"},
 		{"default:stick"}
 	}
@@ -210,6 +249,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "metals:hammer_copper",
+	recipe = {
+		{"metals:hammer_head_copper"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
 	output = "metals:pick_copper",
 	recipe = {
 		{"metals:pick_head_copper"},
@@ -228,18 +276,18 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "metals:shovel_copper",
+	output = "metals:axe_iron",
 	recipe = {
-		{"metals:shovel_head_copper"},
+		{"metals:axe_head_iron"},
 		{"default:stick"},
 		{"default:stick"}
 	}
 })
 
 minetest.register_craft({
-	output = "metals:axe_iron",
+	output = "metals:shovel_copper",
 	recipe = {
-		{"metals:axe_head_iron"},
+		{"metals:shovel_head_copper"},
 		{"default:stick"},
 		{"default:stick"}
 	}
@@ -258,6 +306,50 @@ minetest.register_craft({
 	output = "metals:sword_copper",
 	recipe = {
 		{"metals:sword_head_copper"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:hammer_tin",
+	recipe = {
+		{"metals:hammer_head_tin"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:pick_tin",
+	recipe = {
+		{"metals:pick_head_tin"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:shovel_tin",
+	recipe = {
+		{"metals:shovel_head_tin"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:axe_tin",
+	recipe = {
+		{"metals:axe_head_tin"},
+		{"default:stick"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:sword_tin",
+	recipe = {
+		{"metals:sword_head_tin"},
 		{"default:stick"}
 	}
 })
