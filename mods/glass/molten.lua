@@ -135,7 +135,7 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	neighbors = {"default:lava_source", "default:lava_flowing"},
+	neighbors = {"group:igniter"},
 	nodenames = {"default:sand"},
 	interval = 0.5,
 	chance = 5,
@@ -146,7 +146,7 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	neighbors = {"default:lava_source", "default:lava_flowing"},
+	neighbors = {"group:igniter"},
 	nodenames = {"default:silver_sand"},
 	interval = 0.5,
 	chance = 15,
@@ -157,7 +157,7 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	neighbors = {"default:lava_source", "default:lava_flowing"},
+	neighbors = {"group:igniter"},
 	nodenames = {"default:desert_sand"},
 	interval = 0.5,
 	chance = 15,
