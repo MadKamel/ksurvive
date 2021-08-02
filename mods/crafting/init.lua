@@ -3,6 +3,22 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "hay:pitch_hay_block",
+	recipe = {
+		{"hay:polluted_grass", "hay:polluted_grass"},
+		{"hay:polluted_grass", "hay:polluted_grass"}
+	}
+})
+
+minetest.register_craft({
+	output = "hay:hay_block",
+	recipe = {
+		{"hay:grass", "hay:grass"},
+		{"hay:grass", "hay:grass"}
+	}
+})
+
+minetest.register_craft({
 	output = "pitch:grass_1",
 	recipe = {
 		{"hay:polluted_grass"},
