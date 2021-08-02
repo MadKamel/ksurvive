@@ -3,6 +3,22 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "pitch:grass_1",
+	recipe = {
+		{"hay:polluted_grass"},
+		{"default:dirt"}
+	}
+})
+
+minetest.register_craft({
+	output = "default:dirt_with_grass",
+	recipe = {
+		{"hay:grass"},
+		{"default:dirt"}
+	}
+})
+
+minetest.register_craft({
 	output = "embers:coal_dust",
 	recipe = {
 		{"default:coal_lump", "default:coal_lump"}

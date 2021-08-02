@@ -337,7 +337,8 @@ minetest.register_tool("metals:scythe_iron", {
 		full_punch_interval = 2,
 		max_drop_level=1,
 		groupcaps={
-			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=50, maxlevel=1}
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=50, maxlevel=1},
+			grass = {times={[3]=0.25}, uses=50, maxlevel=1}
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -352,7 +353,8 @@ minetest.register_tool("metals:scythe_copper", {
 		full_punch_interval = 1,
 		max_drop_level=1,
 		groupcaps={
-			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=175, maxlevel=1}
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=100, maxlevel=1},
+			grass = {times={[3]=0.25}, uses=100, maxlevel=1}
 		},
 		damage_groups = {fleshy=4},
 	},
@@ -367,7 +369,8 @@ minetest.register_tool("metals:scythe_tin", {
 		full_punch_interval = 0.4,
 		max_drop_level=1,
 		groupcaps={
-			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=175, maxlevel=1}
+			snappy = {times={[1]=0.50, [2]=0.25, [3]=0.05}, uses=175, maxlevel=1},
+			grass = {times={[3]=0.25}, uses=175, maxlevel=1}
 		},
 		damage_groups = {fleshy=5},
 	},

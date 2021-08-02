@@ -451,8 +451,15 @@ minetest.register_node("default:dirt_with_grass", {
 	tiles = {"default_grass.png", "default_dirt.png",
 		{name = "default_dirt.png^default_grass_side.png",
 			tileable_vertical = false}},
-	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-	drop = "default:dirt",
+	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1, grass = 3},
+	drop = {
+		max_items = 2,
+		items = {
+			{items = {"default:dirt"}},
+			{items = {"hay:grass"},
+			tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
+		}
+	},
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.25},
 	}),
