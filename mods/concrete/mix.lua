@@ -4,7 +4,7 @@ bucket.register_liquid(
 	"concrete:concrete_mix",
 	"concrete_bucket.png",
 	"Wooden Bucket with Concrete Mix",
-	{tool = 1, water_bucket = 1}
+	{tool = 1}
 )
 
 bucket.register_liquid(
@@ -13,7 +13,7 @@ bucket.register_liquid(
 	"concrete:stone_mix",
 	"concrete_stone_bucket.png",
 	"Wooden Bucket with Stone Concrete Mix",
-	{tool = 1, water_bucket = 1}
+	{tool = 1}
 )
 
 bucket.register_liquid(
@@ -22,7 +22,7 @@ bucket.register_liquid(
 	"concrete:desert_stone_mix",
 	"concrete_desert_stone_bucket.png",
 	"Wooden Bucket with Desert Stone Concrete Mix",
-	{tool = 1, water_bucket = 1}
+	{tool = 1}
 )
 
 minetest.register_node("concrete:concrete_mix_source", {
@@ -63,10 +63,6 @@ minetest.register_node("concrete:concrete_mix_source", {
 	liquid_alternative_flowing = "concrete:concrete_mix_flowing",
 	liquid_alternative_source = "concrete:concrete_mix_source",
 	liquid_viscosity = 10,
-	-- Not renewable to avoid horizontal spread of water sources in sloping
-	-- rivers that can cause water to overflow riverbanks and cause floods.
-	-- River water source is instead made renewable by the 'force renew'
-	-- option used in the 'bucket' mod by the river water bucket.
 	liquid_renewable = false,
 	liquid_range = 0,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
@@ -156,11 +152,7 @@ minetest.register_node("concrete:stone_mix_source", {
 	liquidtype = "source",
 	liquid_alternative_flowing = "concrete:stone_mix_flowing",
 	liquid_alternative_source = "concrete:stone_mix_source",
-	liquid_viscosity = 15,
-	-- Not renewable to avoid horizontal spread of water sources in sloping
-	-- rivers that can cause water to overflow riverbanks and cause floods.
-	-- River water source is instead made renewable by the 'force renew'
-	-- option used in the 'bucket' mod by the river water bucket.
+	liquid_viscosity = 10,
 	liquid_renewable = false,
 	liquid_range = 0,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
@@ -206,9 +198,9 @@ minetest.register_node("concrete:stone_mix_flowing", {
 	liquidtype = "flowing",
 	liquid_alternative_flowing = "concrete:stone_mix_flowing",
 	liquid_alternative_source = "concrete:stone_mix_source",
-	liquid_viscosity = 15,
+	liquid_viscosity = 10,
 	liquid_renewable = false,
-	liquid_range = 1,
+	liquid_range = 0,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
 	groups = {liquid = 3, not_in_creative_inventory = 1},
 })
@@ -250,13 +242,9 @@ minetest.register_node("concrete:desert_stone_mix_source", {
 	liquidtype = "source",
 	liquid_alternative_flowing = "concrete:desert_stone_mix_flowing",
 	liquid_alternative_source = "concrete:desert_stone_mix_source",
-	liquid_viscosity = 15,
-	-- Not renewable to avoid horizontal spread of water sources in sloping
-	-- rivers that can cause water to overflow riverbanks and cause floods.
-	-- River water source is instead made renewable by the 'force renew'
-	-- option used in the 'bucket' mod by the river water bucket.
+	liquid_viscosity = 10,
 	liquid_renewable = false,
-	liquid_range = 1,
+	liquid_range = 0,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
 	groups = {liquid = 3},
 })
@@ -300,9 +288,9 @@ minetest.register_node("concrete:desert_stone_mix_flowing", {
 	liquidtype = "flowing",
 	liquid_alternative_flowing = "concrete:desert_stone_mix_flowing",
 	liquid_alternative_source = "concrete:desert_stone_mix_source",
-	liquid_viscosity = 15,
+	liquid_viscosity = 10,
 	liquid_renewable = false,
-	liquid_range = 1,
+	liquid_range = 0,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
 	groups = {liquid = 3, not_in_creative_inventory = 1},
 })
