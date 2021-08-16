@@ -5,16 +5,18 @@
 minetest.register_craft({
 	output = "hay:pitch_hay_block",
 	recipe = {
-		{"hay:polluted_grass", "hay:polluted_grass"},
-		{"hay:polluted_grass", "hay:polluted_grass"}
+		{"hay:polluted_grass", "hay:polluted_grass", "hay:polluted_grass"},
+		{"hay:polluted_grass", "hay:polluted_grass", "hay:polluted_grass"},
+		{"hay:polluted_grass", "hay:polluted_grass", "hay:polluted_grass"}
 	}
 })
 
 minetest.register_craft({
 	output = "hay:hay_block",
 	recipe = {
-		{"hay:grass", "hay:grass"},
-		{"hay:grass", "hay:grass"}
+		{"hay:grass", "hay:grass", "hay:grass"},
+		{"hay:grass", "hay:grass", "hay:grass"},
+		{"hay:grass", "hay:grass", "hay:grass"}
 	}
 })
 
@@ -576,62 +578,10 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "concrete:stone_mix",
-	recipe = {
-		{"default:stick"},
-		{"concrete:stone_base"},
-		{"bucket:bucket_river_water"}
-	}
-})
-
-minetest.register_craft({
-	output = "concrete:desert_stone_mix",
-	recipe = {
-		{"default:stick"},
-		{"concrete:desert_stone_base"},
-		{"bucket:bucket_river_water"}
-	}
-})
-
-minetest.register_craft({
 	output = "concrete:concrete_base 8",
 	recipe = {
 		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
 		{"default:sand","default:sand","default:sand"}
-	}
-})
-
-minetest.register_craft({
-	output = "concrete:stone_base 8",
-	recipe = {
-		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
-		{"default:gravel","default:cobble","default:gravel"}
-	}
-})
-
-minetest.register_craft({
-	output = "concrete:desert_stone_base 8",
-	recipe = {
-		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
-		{"default:gravel","default:desert_cobble","default:gravel"}
-	}
-})
-
-minetest.register_craft({
-	output = "bucket:bucket_river_water",
-	recipe = {
-		{"foodstuff:salt","foodstuff:salt","foodstuff:salt"},
-		{"foodstuff:salt","bucket:bucket_water","foodstuff:salt"},
-		{"foodstuff:salt","foodstuff:salt","foodstuff:salt"}
-	}
-})
-
-minetest.register_craft({
-	output = "bucket:bucket_river_water",
-	recipe = {
-		{"foodstuff:bitter_salt","foodstuff:bitter_salt","foodstuff:bitter_salt"},
-		{"foodstuff:bitter_salt","bucket:bucket_water","foodstuff:bitter_salt"},
-		{"foodstuff:bitter_salt","foodstuff:bitter_salt","foodstuff:bitter_salt"}
 	}
 })
 
@@ -650,20 +600,6 @@ minetest.register_craft({
 		{"default:wood","default:wood","default:wood"},
 		{"default:stick","default:stick","default:stick"},
 		{"default:stick","","default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "foodstuff:bitter_salt 4",
-	recipe = {
-		{"default:desert_sand"}
-	}
-})
-
-minetest.register_craft({
-	output = "foodstuff:salt 4",
-	recipe = {
-		{"default:silver_sand"}
 	}
 })
 
@@ -765,17 +701,23 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "rocks:rock 2",
+	output = "rocks:desert_rock 2",
 	recipe = {
 		{"default:desert_cobble"}
 	}
 })
 
 minetest.register_craft({
-	output = "default:gravel",
+	output = "rocks:basalt_rock 2",
 	recipe = {
-		{"rocks:rock","rocks:rock"},
-		{"rocks:rock","rocks:rock"}
+		{"rocks:basalt_cobble"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:granite_rock 2",
+	recipe = {
+		{"rocks:granite_cobble"}
 	}
 })
 
@@ -799,6 +741,8 @@ minetest.register_craft({
 		{"rocks:sharpened_rock","rocks:sharpened_rock"}
 	}
 })
+
+-- TODO: Add Desert rock, Granite rock and Basalt rock recipes.
 
 minetest.register_craft({
 	output = "default:sand 2",
@@ -832,7 +776,6 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "foodstuff:applesauce",
 	recipe = {
-		{"","rocks:rock",""},
 		{"default:apple", "default:apple", "default:apple"},
 		{"", "bucket:bucket_water",""}
 	}
