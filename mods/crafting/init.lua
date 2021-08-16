@@ -3,6 +3,36 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "rocks:pick_stone",
+	recipe = {
+		{"rocks:pick_head_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_desert_stone",
+	recipe = {
+		{"rocks:pick_head_desert_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_head_stone",
+	recipe = {
+		{"rocks:sharpened_rock", "rocks:rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_head_desert_stone",
+	recipe = {
+		{"rocks:desert_sharpened_rock", "rocks:desert_rock"}
+	}
+})
+
+minetest.register_craft({
 	output = "hay:pitch_hay_block",
 	recipe = {
 		{"hay:polluted_grass", "hay:polluted_grass", "hay:polluted_grass"},
@@ -251,7 +281,6 @@ minetest.register_craft({
 	output = "metals:hammer_iron",
 	recipe = {
 		{"metals:hammer_head_iron"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -260,7 +289,6 @@ minetest.register_craft({
 	output = "metals:pick_iron",
 	recipe = {
 		{"metals:pick_head_iron"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -269,7 +297,6 @@ minetest.register_craft({
 	output = "metals:pick_iron",
 	recipe = {
 		{"metals:pick_head_iron"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -286,7 +313,6 @@ minetest.register_craft({
 	output = "metals:hammer_copper",
 	recipe = {
 		{"metals:hammer_head_copper"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -295,7 +321,6 @@ minetest.register_craft({
 	output = "metals:pick_copper",
 	recipe = {
 		{"metals:pick_head_copper"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -304,7 +329,6 @@ minetest.register_craft({
 	output = "metals:shovel_iron",
 	recipe = {
 		{"metals:shovel_head_iron"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -313,7 +337,6 @@ minetest.register_craft({
 	output = "metals:axe_iron",
 	recipe = {
 		{"metals:axe_head_iron"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -322,7 +345,6 @@ minetest.register_craft({
 	output = "metals:shovel_copper",
 	recipe = {
 		{"metals:shovel_head_copper"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -331,7 +353,6 @@ minetest.register_craft({
 	output = "metals:axe_copper",
 	recipe = {
 		{"metals:axe_head_copper"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -348,7 +369,6 @@ minetest.register_craft({
 	output = "metals:hammer_tin",
 	recipe = {
 		{"metals:hammer_head_tin"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -357,7 +377,6 @@ minetest.register_craft({
 	output = "metals:pick_tin",
 	recipe = {
 		{"metals:pick_head_tin"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -366,7 +385,6 @@ minetest.register_craft({
 	output = "metals:shovel_tin",
 	recipe = {
 		{"metals:shovel_head_tin"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
@@ -375,7 +393,6 @@ minetest.register_craft({
 	output = "metals:axe_tin",
 	recipe = {
 		{"metals:axe_head_tin"},
-		{"default:stick"},
 		{"default:stick"}
 	}
 })
