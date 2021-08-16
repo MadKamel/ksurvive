@@ -31,3 +31,18 @@ minetest.register_craftitem("rocks:rock_dust", {
 	description = "Rock Dust",
 	inventory_image = "rock_dust.png",
 })
+
+minetest.register_craftitem("rocks:desert_rock", {
+	description = "Desert Rock",
+	inventory_image = "desert_rock.png",
+})
+
+minetest.register_craftitem("rocks:desert_sharpened_rock", {
+	description = "Desert Sharpened Rock",
+	inventory_image = "desert_sharpened_rock.png",
+})
+
+minetest.register_craftitem("rocks:desert_rock_dust", {
+	description = "Desert Rock Dust",
+	inventory_image = "desert_rock_dust.png",
+})
