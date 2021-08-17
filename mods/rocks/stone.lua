@@ -1,3 +1,15 @@
+minetest.register_node("rocks:pumice", {
+	description = "Pumice",
+	tiles = {"pumice_stone.png"},
+	groups = {cracky = 3, crumbly = 2, falling_node = 1}
+})
+
+minetest.register_node("rocks:pumice_compact", {
+	description = "Slow-Cooled Pumice",
+	tiles = {"pumice_slowcooled.png"},
+	groups = {cracky = 2}
+})
+
 minetest.register_node("rocks:eclogite", {
 	description = "Eclogite",
 	tiles = {"eclogite_stone.png"},
@@ -57,7 +69,7 @@ minetest.register_node("rocks:basalt_gravel", {
 	description = "Basalt Gravel",
 	tiles = {"basalt_gravel.png"},
 	is_ground_content = false,
-	groups = {crumbly = 3},
+	groups = {crumbly = 2, falling_node = 1},
 })
 
 minetest.register_node("rocks:mildew_basalt", {
