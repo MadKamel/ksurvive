@@ -14,3 +14,21 @@ minetest.register_tool("adze:adze", {
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}
 })
+
+minetest.register_tool("adze:stone_adze", {
+	description = "Stone-Tipped Adze",
+	inventory_image = "stone_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=25, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=25, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=25, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=25, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
