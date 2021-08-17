@@ -1,16 +1,7 @@
 -- IRON / HEMATITE
 
-bucket.register_liquid(
-	"metals:hematite_molten_source",
-	"metals:hematite_molten_flowing",
-	"metals:hematite_molten_bucket",
-	"bucket_hematite.png",
-	"Wooden Bucket with Molten Hematite",
-	{tool = 1}
-)
-
 minetest.register_node("metals:hematite_molten_source", {
-	description = "Glass Source Node",
+	description = "Molten Iron Source",
 	drawtype = "liquid",
 	light_source = default.LIGHT_MAX - 5,
 	tiles = {
@@ -111,6 +102,17 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "metals:hematite_molten_source"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"metals:iron_block"},
+	interval = 0.5,
+	chance = 40,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "metals:glowing_iron_block"})
 	end
 })
 
