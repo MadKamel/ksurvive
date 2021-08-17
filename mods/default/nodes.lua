@@ -1187,18 +1187,9 @@ minetest.register_node("default:stone_with_coal", {
 	description = S("Coal Ore"),
 	tiles = {"default_stone.png^default_mineral_coal.png"},
 	groups = {cracky = 3},
-	drop = "default:coal_lump",
+	drop = {"default:coal_lump", efault:
 	sounds = default.node_sound_stone_defaults(),
 })
-
-minetest.register_node("default:coalblock", {
-	description = S("Coal Block"),
-	tiles = {"default_coal_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 3},
-	sounds = default.node_sound_stone_defaults(),
-})
-
 
 minetest.register_node("default:stone_with_iron", {
 	description = S("Iron Ore"),
@@ -1208,15 +1199,6 @@ minetest.register_node("default:stone_with_iron", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:steelblock", {
-	description = S("Steel Block"),
-	tiles = {"default_steel_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_metal_defaults(),
-})
-
-
 minetest.register_node("default:stone_with_copper", {
 	description = S("Copper Ore"),
 	tiles = {"default_stone.png^default_mineral_copper.png"},
@@ -1225,15 +1207,6 @@ minetest.register_node("default:stone_with_copper", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:copperblock", {
-	description = S("Copper Block"),
-	tiles = {"default_copper_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_metal_defaults(),
-})
-
-
 minetest.register_node("default:stone_with_tin", {
 	description = S("Tin Ore"),
 	tiles = {"default_stone.png^default_mineral_tin.png"},
@@ -1241,24 +1214,6 @@ minetest.register_node("default:stone_with_tin", {
 	drop = "default:tin_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
-
-minetest.register_node("default:tinblock", {
-	description = S("Tin Block"),
-	tiles = {"default_tin_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_metal_defaults(),
-})
-
-
-minetest.register_node("default:bronzeblock", {
-	description = S("Bronze Block"),
-	tiles = {"default_bronze_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_metal_defaults(),
-})
-
 
 minetest.register_node("default:stone_with_mese", {
 	description = S("Mese Ore"),
@@ -1286,28 +1241,11 @@ minetest.register_node("default:stone_with_gold", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("default:goldblock", {
-	description = S("Gold Block"),
-	tiles = {"default_gold_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1},
-	sounds = default.node_sound_metal_defaults(),
-})
-
-
 minetest.register_node("default:stone_with_diamond", {
 	description = S("Diamond Ore"),
 	tiles = {"default_stone.png^default_mineral_diamond.png"},
 	groups = {cracky = 1},
 	drop = "default:diamond",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:diamondblock", {
-	description = S("Diamond Block"),
-	tiles = {"default_diamond_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -2804,31 +2742,6 @@ default.register_fence_rail("default:fence_rail_aspen_wood", {
 	sounds = default.node_sound_wood_defaults()
 })
 
-minetest.register_node("default:glass", {
-	description = S("Glass"),
-	drawtype = "glasslike_framed_optional",
-	tiles = {"default_glass.png", "default_glass_detail.png"},
-	use_texture_alpha = "clip", -- only needed for stairs API
-	paramtype = "light",
-	paramtype2 = "glasslikeliquidlevel",
-	sunlight_propagates = true,
-	is_ground_content = false,
-	groups = {cracky = 3, oddly_breakable_by_hand = 3},
-	sounds = default.node_sound_glass_defaults(),
-})
-
-minetest.register_node("default:obsidian_glass", {
-	description = S("Obsidian Glass"),
-	drawtype = "glasslike_framed_optional",
-	tiles = {"default_obsidian_glass.png", "default_obsidian_glass_detail.png"},
-	use_texture_alpha = "clip", -- only needed for stairs API
-	paramtype = "light",
-	paramtype2 = "glasslikeliquidlevel",
-	is_ground_content = false,
-	sunlight_propagates = true,
-	sounds = default.node_sound_glass_defaults(),
-	groups = {cracky = 3},
-})
 
 
 minetest.register_node("default:brick", {
