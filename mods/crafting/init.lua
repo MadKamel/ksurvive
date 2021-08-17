@@ -621,22 +621,31 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "foodstuff:stewed_mushroom_red",
+	output = "adze:stone_adze",
 	recipe = {
-		{"flowers:mushroom_red", "foodstuff:salt"},
-		{"bucket:bucket_water", ""},
-		{"default:torch", ""}
+		{"rocks:sharpened_rock", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
 	}
 })
 
-minetest.register_craft({
-	output = "foodstuff:stewed_mushroom_red",
-	recipe = {
-		{"flowers:mushroom_red", "foodstuff:bitter_salt"},
-		{"bucket:bucket_water", ""},
-		{"default:torch", ""}
-	}
-})
+--minetest.register_craft({
+--	output = "foodstuff:stewed_mushroom_brown",
+--	recipe = {
+--		{"flowers:mushroom_brown", "groups:salt"},
+--		{"bucket:bucket_water", ""},
+--		{"default:torch", ""}
+--	}
+--})
+
+--minetest.register_craft({
+--	output = "foodstuff:stewed_mushroom_red",
+--	recipe = {
+--		{"flowers:mushroom_red", "groups:salt"},
+--		{"bucket:bucket_water", ""},
+--		{"default:torch", ""}
+--	}
+--})
 
 minetest.register_craft({
 	output = "default:clay_lump 8",
