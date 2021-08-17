@@ -1,7 +1,7 @@
 -- IRON / HEMATITE
 
 minetest.register_node("metals:hematite_molten_source", {
-	description = "Molten Iron Source",
+	description = "Molten Iron Source Node",
 	drawtype = "liquid",
 	light_source = default.LIGHT_MAX - 5,
 	tiles = {
@@ -47,7 +47,7 @@ minetest.register_node("metals:hematite_molten_source", {
 })
 
 minetest.register_node("metals:hematite_molten_flowing", {
-	description = "Molten Hematite Flowing",
+	description = "Molten Iron Flowing Node",
 	drawtype = "flowingliquid",
 	light_source = default.LIGHT_MAX - 5,
 	tiles = {"moltenglass.png"},
@@ -140,16 +140,6 @@ minetest.register_abm({
 
 -- COPPER
 
-
-bucket.register_liquid(
-	"metals:copper_molten_source",
-	"metals:copper_molten_flowing",
-	"metals:copper_molten_bucket",
-	"bucket_copper.png",
-	"Wooden Bucket with Molten Copper",
-	{tool = 1}
-)
-
 minetest.register_node("metals:copper_molten_source", {
 	description = "Molten Copper Source Node",
 	drawtype = "liquid",
@@ -197,7 +187,7 @@ minetest.register_node("metals:copper_molten_source", {
 })
 
 minetest.register_node("metals:copper_molten_flowing", {
-	description = "Molten Copper Flowing",
+	description = "Molten Copper Flowing Node",
 	drawtype = "flowingliquid",
 	light_source = default.LIGHT_MAX - 5,
 	tiles = {"moltenglass.png"},
@@ -256,6 +246,17 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"metals:copper_block"},
+	interval = 0.5,
+	chance = 40,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "metals:glowing_copper_block"})
+	end
+})
+
+minetest.register_abm({
 	neighbors = {"group:water"},
 	nodenames = {"metals:copper_molten_source"},
 	interval = 0.5,
@@ -279,17 +280,6 @@ minetest.register_abm({
 
 
 -- TIN
-
-
-
-bucket.register_liquid(
-	"metals:tin_molten_source",
-	"metals:tin_molten_flowing",
-	"metals:tin_molten_bucket",
-	"bucket_tin.png",
-	"Wooden Bucket with Molten Tin",
-	{tool = 1}
-)
 
 minetest.register_node("metals:tin_molten_source", {
 	description = "Molten Tin Source Node",
@@ -338,7 +328,7 @@ minetest.register_node("metals:tin_molten_source", {
 })
 
 minetest.register_node("metals:tin_molten_flowing", {
-	description = "Molten Tin Flowing",
+	description = "Molten Tin Flowing Node",
 	drawtype = "flowingliquid",
 	light_source = default.LIGHT_MAX - 5,
 	tiles = {"moltenglass.png"},
@@ -383,6 +373,17 @@ minetest.register_node("metals:tin_molten_flowing", {
 	damage_per_second = 9,
 	post_effect_color = {a = 103, r = 30, g = 76, b = 90},
 	groups = {liquid = 3, not_in_creative_inventory = 1},
+})
+
+minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"metals:tin_block"},
+	interval = 0.5,
+	chance = 40,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "metals:glowing_tin_block"})
+	end
 })
 
 minetest.register_abm({
