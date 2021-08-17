@@ -15,7 +15,7 @@ minetest.register_tool("rocks:pick_stone", {
 
 minetest.register_tool("rocks:pick_desert_stone", {
 	description = "Desert Stone Pickaxe",
-	inventory_image = "tool_desert_stone_pick.png",
+	inventory_image = "tool_desertstone_pick.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=1,

@@ -3,6 +3,13 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "rocks:basalt_rock 4",
+	recipe = {
+		{"rocks:basalt_gravel"}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:rock 4",
 	recipe = {
 		{"default:gravel"}

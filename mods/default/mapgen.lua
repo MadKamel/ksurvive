@@ -491,23 +491,7 @@ function default.register_ores()
 
 	-- Sandstone
 
-	minetest.register_ore({
-		ore_type        = "stratum",
-		ore             = "default:sandstone",
-		wherein         = {"default:desert_stone"},
-		clust_scarcity  = 1,
-		y_max           = 39,
-		y_min           = 3,
-		noise_params    = {
-			offset = 21,
-			scale = 16,
-			spread = {x = 128, y = 128, z = 128},
-			seed = 90122,
-			octaves = 1,
-		},
-		stratum_thickness = 2,
-		biomes = {"desert"},
-	})
+	 
 
 	-- Blob ore.
 	-- These before scatter ores to avoid other ores in blobs.
@@ -881,6 +865,24 @@ function default.register_ores()
 		y_max          = -4096,
 		y_min          = -31000,
 	})
+
+	minetest.register_ore({
+		ore_type        = "stratum",
+		ore             = "rocks:marble",
+		wherein         = {"default:stone", "rocks:granite"},
+		clust_scarcity  = 1,
+		y_max           = -15,
+		y_min           = -60,
+		noise_params    = {
+			offset = 21,
+			scale = 64,
+			spread = {x = 128, y = 32, z = 128},
+			seed = 90122,
+			octaves = 1,
+		},
+		stratum_thickness = 2,
+		biomes = {"granite_peak", "grassland"},
+	})
 end
 
 
@@ -933,10 +935,12 @@ function default.register_biomes()
 
 	minetest.register_biome({
 		name = "basalt_plains",
-		node_top = "rocks:basalt",
-		depth_top = 10,
-		node_riverbed = "default:mildew_basalt",
-		depth_riverbed = 2,
+		node_top = "rocks:basalt_gravel",
+		depth_top = 1,
+		node_filler = "rocks:basalt",
+		depth_filler = 18,
+		node_riverbed = "rocks:mildew_basalt",
+		depth_riverbed = 3,
 		node_dungeon = "default:basalt_cobble",
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
