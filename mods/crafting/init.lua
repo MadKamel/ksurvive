@@ -3,11 +3,20 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "rocks:pumice_compact",
+	recipe = {
+		{"default:stick", "default:paper", "default:stick"},
+		{"default:stick", "default:paper", "default:stick"},
+		{"", "default:stick", ""}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:pumice 9",
 	recipe = {
 		{"rocks:pumice_compact"}
 	}
-}
+})
 
 minetest.register_craft({
 	output = "rocks:pumice_compact",
@@ -16,15 +25,15 @@ minetest.register_craft({
 		{"rocks:pumice", "rocks:pumice", "rocks:pumice"},
 		{"rocks:pumice", "rocks:pumice", "rocks:pumice"}
 	}
-}
-		
+})
+
 minetest.register_craft({
 	output = "rocks:rock_dust",
 	recipe = {
 		{"rocks:pumice"}
 	}
-}
-	
+})
+
 minetest.register_craft({
 	output = "rocks:basalt_rock 4",
 	recipe = {
@@ -72,6 +81,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "rocks:shovel_stone",
+	recipe = {
+		{"rocks:shovel_head_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_desert_stone",
+	recipe = {
+		{"rocks:shovel_head_desert_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_granite",
+	recipe = {
+		{"rocks:shovel_head_granite"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_basalt",
+	recipe = {
+		{"rocks:shovel_head_basalt"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:pick_head_stone",
 	recipe = {
 		{"rocks:sharpened_rock", "rocks:rock"}
@@ -95,7 +136,35 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "rocks:pick_head_basalt",
 	recipe = {
-		{"rocks:basalt_sharpened_rock", "rocks:basalt_rock"}
+		{"rocks:basalt_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_head_stone",
+	recipe = {
+		{"rocks:sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_head_desert_stone",
+	recipe = {
+		{"rocks:desert_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_head_granite",
+	recipe = {
+		{"rocks:granite_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:shovel_head_basalt",
+	recipe = {
+		{"rocks:basalt_sharpened_rock"}
 	}
 })
 

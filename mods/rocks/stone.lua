@@ -1,12 +1,12 @@
 minetest.register_node("rocks:pumice", {
 	description = "Pumice",
-	tiles = {"pumice_stone.png"},
+	tiles = {"pumice.png"},
 	groups = {cracky = 3, crumbly = 2, falling_node = 1}
 })
 
 minetest.register_node("rocks:pumice_compact", {
-	description = "Slow-Cooled Pumice",
-	tiles = {"pumice_slowcooled.png"},
+	description = "Compact Pumice",
+	tiles = {"pumice_compact.png"},
 	groups = {cracky = 2}
 })
 

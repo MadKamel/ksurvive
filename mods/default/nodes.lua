@@ -1186,8 +1186,8 @@ minetest.register_node("default:aspen_sapling", {
 minetest.register_node("default:stone_with_coal", {
 	description = S("Coal Ore"),
 	tiles = {"default_stone.png^default_mineral_coal.png"},
-	groups = {cracky = 3},
-	drop = {"default:coal_lump", efault:
+	groups = {cracky = 2},
+	drop = {"default:coal_lump"},
 	sounds = default.node_sound_stone_defaults(),
 })
 
