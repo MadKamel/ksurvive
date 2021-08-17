@@ -3,6 +3,22 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "rocks:pumice 9",
+	recipe = {
+		{"rocks:pumice_compact"}
+	}
+}
+
+minetest.register_craft({
+	output = "rocks:pumice_compact",
+	recipe = {
+		{"rocks:pumice", "rocks:pumice", "rocks:pumice"},
+		{"rocks:pumice", "rocks:pumice", "rocks:pumice"},
+		{"rocks:pumice", "rocks:pumice", "rocks:pumice"}
+	}
+}
+	
+minetest.register_craft({
 	output = "rocks:basalt_rock 4",
 	recipe = {
 		{"rocks:basalt_gravel"}
