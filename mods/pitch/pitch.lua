@@ -193,3 +193,23 @@ minetest.register_craftitem("pitch:pitch_dust", {
 	inventory_image = "pitch_powder.png",
 	groups = {}
 })
+
+minetest.register_ore({
+	ore_type        = "blob",
+	ore             = "pitch:pitch_source",
+	wherein         = {"default:stone", "default:desert_stone", "default:gravel"},
+	clust_scarcity  = 8 * 8 * 8,
+	clust_size      = 1,
+	y_max           = 31000,
+	y_min           = -15
+})
+
+minetest.register_ore({
+	ore_type        = "blob",
+	ore             = "pitch:stone_with_pitch",
+	wherein         = {"default:stone"},
+	clust_scarcity  = 32 * 32 * 32,
+	clust_size      = 3,
+	y_max           = 31000,
+	y_min           = -45
+})

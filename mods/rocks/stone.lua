@@ -13,6 +13,25 @@ minetest.register_node("rocks:granite_cobble", {
 	groups = {cracky = 3, stone = 2},
 })
 
+minetest.register_node("rocks:mildew_granite", {
+	description = "Granite with Mildew",
+	tiles = {"mildewey_granite_top.png", "mildewey_granite_top.png", "mildewey_granite.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "rocks:granite_cobble"
+})
+
+
+minetest.register_abm({
+	neighbors = {"default:water_source", "default:water_flowing"},
+	nodenames = {"rocks:granite"},
+	interval = 5,
+	chance = 15,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "rocks:mildew_granite"})
+	end
+})
+
 minetest.register_node("rocks:basalt", {
 	description = "Basalt",
 	tiles = {"basalt_stone.png"},
@@ -26,4 +45,23 @@ minetest.register_node("rocks:basalt_cobble", {
 	tiles = {"basalt_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
+})
+
+minetest.register_node("rocks:mildew_basalt", {
+	description = "Basalt with Mildew",
+	tiles = {"mildewey_basalt_top.png", "mildewey_basalt_top.png", "mildewey_basalt.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "rocks:basalt_cobble"
+})
+
+
+minetest.register_abm({
+	neighbors = {"default:water_source", "default:water_flowing"},
+	nodenames = {"rocks:basalt"},
+	interval = 5,
+	chance = 15,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "rocks:mildew_basalt"})
+	end
 })

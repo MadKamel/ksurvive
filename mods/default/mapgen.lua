@@ -133,18 +133,6 @@ function default.register_mgv6_ores()
 		},
 	})
 
-	-- Pitch (ksurvive)
-
-	minetest.register_ore({
-		ore_type        = "blob",
-		ore             = "pitch:pitch_source",
-		wherein         = {"default:stone", "default:desert_stone", "default:gravel"},
-		clust_scarcity  = 8 * 8 * 8,
-		clust_size      = 1,
-		y_max           = 31000,
-		y_min           = -15
-	})
-
 	-- Scatter ores
 
 	-- Coal
@@ -904,245 +892,24 @@ end
 
 function default.register_biomes()
 
-	-- Icesheet
+	-- Granite Peaks
 
 	minetest.register_biome({
-		name = "icesheet",
-		node_dust = "default:snowblock",
-		node_top = "default:snowblock",
-		depth_top = 1,
-		node_filler = "default:snowblock",
-		depth_filler = 3,
-		node_stone = "default:cave_ice",
-		node_water_top = "default:ice",
-		depth_water_top = 10,
-		node_river_water = "default:ice",
-		node_riverbed = "default:gravel",
-		depth_riverbed = 2,
-		node_dungeon = "default:ice",
-		node_dungeon_stair = "stairs:stair_ice",
-		y_max = 31000,
-		y_min = -8,
-		heat_point = 0,
-		humidity_point = 73,
-	})
-
-	minetest.register_biome({
-		name = "icesheet_ocean",
-		node_dust = "default:snowblock",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_water_top = "default:ice",
-		depth_water_top = 10,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -9,
-		y_min = -255,
-		heat_point = 0,
-		humidity_point = 73,
-	})
-
-	minetest.register_biome({
-		name = "icesheet_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 0,
-		humidity_point = 73,
-	})
-
-	-- Tundra
-
-	minetest.register_biome({
-		name = "tundra_highland",
-		node_dust = "default:snow",
-		node_riverbed = "default:gravel",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 47,
-		heat_point = 0,
-		humidity_point = 40,
-	})
-
-	minetest.register_biome({
-		name = "tundra",
-		node_top = "default:permafrost_with_stones",
-		depth_top = 1,
-		node_filler = "default:permafrost",
-		depth_filler = 1,
-		node_riverbed = "default:gravel",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 4,
-		y_max = 46,
-		y_min = 2,
-		heat_point = 0,
-		humidity_point = 40,
-	})
-
-	minetest.register_biome({
-		name = "tundra_beach",
-		node_top = "default:gravel",
-		depth_top = 1,
-		node_filler = "default:gravel",
-		depth_filler = 2,
-		node_riverbed = "default:gravel",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = 1,
-		y_min = -3,
-		heat_point = 0,
-		humidity_point = 40,
-	})
-
-	minetest.register_biome({
-		name = "tundra_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:gravel",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -4,
-		y_min = -255,
-		heat_point = 0,
-		humidity_point = 40,
-	})
-
-	minetest.register_biome({
-		name = "tundra_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 0,
-		humidity_point = 40,
-	})
-
-	-- Taiga
-
-	minetest.register_biome({
-		name = "taiga",
-		node_dust = "default:snow",
-		node_top = "default:dirt_with_snow",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
+		name = "granite_peak",
+		--node_dust = "default:snow",
+		node_top = "rocks:granite",
+		depth_top = 75,
+		--node_filler = "rocks:granite",
+		--depth_filler = 75,
 		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
+		depth_riverbed = 1,
+		node_dungeon = "rocks:granite_cobble",
+		--node_dungeon_alt = "default:mossycobble",
+		--node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
-		y_min = 4,
+		y_min = 75,
 		heat_point = 25,
-		humidity_point = 70,
-	})
-
-	minetest.register_biome({
-		name = "taiga_ocean",
-		node_dust = "default:snow",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = 3,
-		y_min = -255,
-		heat_point = 25,
-		humidity_point = 70,
-	})
-
-	minetest.register_biome({
-		name = "taiga_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 25,
-		humidity_point = 70,
-	})
-
-	-- Snowy grassland
-
-	minetest.register_biome({
-		name = "snowy_grassland",
-		node_dust = "default:snow",
-		node_top = "default:dirt_with_snow",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 1,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 4,
-		heat_point = 20,
-		humidity_point = 35,
-	})
-
-	minetest.register_biome({
-		name = "snowy_grassland_ocean",
-		node_dust = "default:snow",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = 3,
-		y_min = -255,
-		heat_point = 20,
-		humidity_point = 35,
-	})
-
-	minetest.register_biome({
-		name = "snowy_grassland_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 20,
-		humidity_point = 35,
+		humidity_point = 15,
 	})
 
 	-- Grassland
@@ -1153,7 +920,7 @@ function default.register_biomes()
 		depth_top = 1,
 		node_filler = "default:dirt",
 		depth_filler = 1,
-		node_riverbed = "default:sand",
+		node_riverbed = "default:silver_sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1165,12 +932,28 @@ function default.register_biomes()
 	})
 
 	minetest.register_biome({
+		name = "basalt_plains",
+		node_top = "rocks:basalt",
+		depth_top = 10,
+		node_riverbed = "default:mildew_basalt",
+		depth_riverbed = 2,
+		node_dungeon = "default:basalt_cobble",
+		--node_dungeon_alt = "default:mossycobble",
+		--node_dungeon_stair = "stairs:stair_cobble",
+		vertical_blend = 1,
+		y_max = 5,
+		y_min = -25,
+		heat_point = 45,
+		humidity_point = 40,
+	})
+
+	minetest.register_biome({
 		name = "grassland_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
-		node_filler = "default:sand",
+		node_filler = "default:silver_sand",
 		depth_filler = 2,
-		node_riverbed = "default:sand",
+		node_riverbed = "default:silver_sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
@@ -1184,11 +967,11 @@ function default.register_biomes()
 
 	minetest.register_biome({
 		name = "grassland_ocean",
-		node_top = "default:sand",
+		node_top = "default:silver_sand",
 		depth_top = 1,
-		node_filler = "default:sand",
+		node_filler = "default:silver_sand",
 		depth_filler = 3,
-		node_riverbed = "default:sand",
+		node_riverbed = "default:silver_sand",
 		depth_riverbed = 2,
 		node_cave_liquid = "default:water_source",
 		node_dungeon = "default:cobble",
@@ -1210,140 +993,6 @@ function default.register_biomes()
 		y_min = -31000,
 		heat_point = 50,
 		humidity_point = 35,
-	})
-
-	-- Coniferous forest
-
-	minetest.register_biome({
-		name = "coniferous_forest",
-		node_top = "default:dirt_with_coniferous_litter",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 6,
-		heat_point = 45,
-		humidity_point = 70,
-	})
-
-	minetest.register_biome({
-		name = "coniferous_forest_dunes",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = 5,
-		y_min = 4,
-		heat_point = 45,
-		humidity_point = 70,
-	})
-
-	minetest.register_biome({
-		name = "coniferous_forest_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 3,
-		y_min = -255,
-		heat_point = 45,
-		humidity_point = 70,
-	})
-
-	minetest.register_biome({
-		name = "coniferous_forest_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 45,
-		humidity_point = 70,
-	})
-
-	-- Deciduous forest
-
-	minetest.register_biome({
-		name = "deciduous_forest",
-		node_top = "default:dirt_with_grass",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 1,
-		heat_point = 60,
-		humidity_point = 68,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_shore",
-		node_top = "default:dirt",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 0,
-		y_min = -1,
-		heat_point = 60,
-		humidity_point = 68,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -2,
-		y_min = -255,
-		heat_point = 60,
-		humidity_point = 68,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 60,
-		humidity_point = 68,
 	})
 
 	-- Desert
@@ -1394,239 +1043,6 @@ function default.register_biomes()
 		y_min = -31000,
 		heat_point = 92,
 		humidity_point = 16,
-	})
-
-	-- Sandstone desert
-
-	minetest.register_biome({
-		name = "sandstone_desert",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 1,
-		node_stone = "default:sandstone",
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:sandstonebrick",
-		node_dungeon_stair = "stairs:stair_sandstone_block",
-		y_max = 31000,
-		y_min = 4,
-		heat_point = 60,
-		humidity_point = 0,
-	})
-
-	minetest.register_biome({
-		name = "sandstone_desert_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_stone = "default:sandstone",
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:sandstonebrick",
-		node_dungeon_stair = "stairs:stair_sandstone_block",
-		y_max = 3,
-		y_min = -255,
-		heat_point = 60,
-		humidity_point = 0,
-	})
-
-	minetest.register_biome({
-		name = "sandstone_desert_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 60,
-		humidity_point = 0,
-	})
-
-	-- Cold desert
-
-	minetest.register_biome({
-		name = "cold_desert",
-		node_top = "default:silver_sand",
-		depth_top = 1,
-		node_filler = "default:silver_sand",
-		depth_filler = 1,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 4,
-		heat_point = 40,
-		humidity_point = 0,
-	})
-
-	minetest.register_biome({
-		name = "cold_desert_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = 3,
-		y_min = -255,
-		heat_point = 40,
-		humidity_point = 0,
-	})
-
-	minetest.register_biome({
-		name = "cold_desert_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 40,
-		humidity_point = 0,
-	})
-
-	-- Savanna
-
-	minetest.register_biome({
-		name = "savanna",
-		node_top = "default:dry_dirt_with_dry_grass",
-		depth_top = 1,
-		node_filler = "default:dry_dirt",
-		depth_filler = 1,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 1,
-		heat_point = 89,
-		humidity_point = 42,
-	})
-
-	minetest.register_biome({
-		name = "savanna_shore",
-		node_top = "default:dry_dirt",
-		depth_top = 1,
-		node_filler = "default:dry_dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 0,
-		y_min = -1,
-		heat_point = 89,
-		humidity_point = 42,
-	})
-
-	minetest.register_biome({
-		name = "savanna_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -2,
-		y_min = -255,
-		heat_point = 89,
-		humidity_point = 42,
-	})
-
-	minetest.register_biome({
-		name = "savanna_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 89,
-		humidity_point = 42,
-	})
-
-	-- Rainforest
-
-	minetest.register_biome({
-		name = "rainforest",
-		node_top = "default:dirt_with_rainforest_litter",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 1,
-		heat_point = 86,
-		humidity_point = 65,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_swamp",
-		node_top = "default:dirt",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 0,
-		y_min = -1,
-		heat_point = 86,
-		humidity_point = 65,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -2,
-		y_min = -255,
-		heat_point = 86,
-		humidity_point = 65,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 86,
-		humidity_point = 65,
 	})
 end
 
@@ -1898,215 +1314,6 @@ function default.register_decorations()
 		})
 	end
 
-	-- Jungle tree and log
-
-	minetest.register_decoration({
-		name = "default:jungle_tree",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.1,
-		biomes = {"rainforest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
-	})
-
-	-- Swamp jungle trees
-
-	minetest.register_decoration({
-		name = "default:jungle_tree(swamp)",
-		deco_type = "schematic",
-		place_on = {"default:dirt"},
-		sidelen = 16,
-		-- Noise tuned to place swamp trees where papyrus is absent
-		noise_params = {
-			offset = 0.0,
-			scale = -0.1,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 354,
-			octaves = 1,
-			persist = 0.5
-		},
-		biomes = {"rainforest_swamp"},
-		y_max = 0,
-		y_min = -1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
-	})
-
-	minetest.register_decoration({
-		name = "default:jungle_log",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_rainforest_litter"},
-		place_offset_y = 1,
-		sidelen = 80,
-		fill_ratio = 0.005,
-		biomes = {"rainforest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = "default:dirt_with_rainforest_litter",
-		num_spawn_by = 8,
-	})
-
-	-- Taiga and temperate coniferous forest pine tree, small pine tree and log
-
-	minetest.register_decoration({
-		name = "default:pine_tree",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.010,
-			scale = 0.048,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
-		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		name = "default:small_pine_tree",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.010,
-			scale = -0.048,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
-		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		name = "default:pine_log",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
-		place_offset_y = 1,
-		sidelen = 80,
-		fill_ratio = 0.0018,
-		biomes = {"taiga", "coniferous_forest"},
-		y_max = 31000,
-		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = {"default:dirt_with_snow", "default:dirt_with_coniferous_litter"},
-		num_spawn_by = 8,
-	})
-
-	-- Acacia tree and log
-
-	minetest.register_decoration({
-		name = "default:acacia_tree",
-		deco_type = "schematic",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.002,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"savanna"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_tree.mts",
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
-	})
-
-	minetest.register_decoration({
-		name = "default:acacia_log",
-		deco_type = "schematic",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.001,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"savanna"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = "default:dry_dirt_with_dry_grass",
-		num_spawn_by = 8,
-	})
-
-	-- Aspen tree and log
-
-	minetest.register_decoration({
-		name = "default:aspen_tree",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.0,
-			scale = -0.015,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	minetest.register_decoration({
-		name = "default:aspen_log",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-			offset = 0.0,
-			scale = -0.0008,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = "default:dirt_with_grass",
-		num_spawn_by = 8,
-	})
-
 	-- Large cactus
 
 	minetest.register_decoration({
@@ -2240,50 +1447,6 @@ function default.register_decorations()
 		y_min = 1,
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	-- Acacia bush
-
-	minetest.register_decoration({
-		name = "default:acacia_bush",
-		deco_type = "schematic",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 90155,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"savanna"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
-
-	-- Pine bush
-
-	minetest.register_decoration({
-		name = "default:pine_bush",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_snow"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 137,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"taiga", "snowy_grassland"},
-		y_max = 31000,
-		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 

@@ -70,14 +70,3 @@ minetest.register_abm({
 		minetest.set_node(pos, {name = "default:dirt_with_grass"})
 	end
 })
-
-minetest.register_abm({
-	neighbors = {"pitch:grass_1"},
-	nodenames = {"default:water_source"},
-	interval = 0.5,
-	chance = 25,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "pitch:polluted_water_source"})
-	end
-})

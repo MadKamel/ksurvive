@@ -3,6 +3,13 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "rocks:rock 4",
+	recipe = {
+		{"default:gravel"}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:pick_stone",
 	recipe = {
 		{"rocks:pick_head_stone"},
@@ -19,6 +26,22 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "rocks:pick_granite",
+	recipe = {
+		{"rocks:pick_head_granite"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_basalt",
+	recipe = {
+		{"rocks:pick_head_basalt"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:pick_head_stone",
 	recipe = {
 		{"rocks:sharpened_rock", "rocks:rock"}
@@ -29,6 +52,20 @@ minetest.register_craft({
 	output = "rocks:pick_head_desert_stone",
 	recipe = {
 		{"rocks:desert_sharpened_rock", "rocks:desert_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_head_granite",
+	recipe = {
+		{"rocks:granite_sharpened_rock", "rocks:granite_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:pick_head_basalt",
+	recipe = {
+		{"rocks:basalt_sharpened_rock", "rocks:basalt_rock"}
 	}
 })
 
@@ -516,14 +553,14 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "letters:pen",
-	recipe = {
-		{"default:stick"},
-		{"letters:inkwell_full"}
-	},
-	replacements = {{"letters:inkwell_full", "letters:inkwell"}}
-})
+--minetest.register_craft({
+--	output = "letters:pen",
+--	recipe = {
+--		{"default:stick"},
+--		{"letters:inkwell_full"}
+--	},
+--	replacements = {{"letters:inkwell_full", "letters:inkwell"}}
+--})
 
 minetest.register_craft({
 	output = "letters:inkwell_full",
@@ -653,42 +690,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:shovel_stone",
-	recipe = {
-		{"", "rocks:rock", ""},
-		{"", "default:stick", ""},
-		{"", "default:stick", ""}
-	}
-})
-
-minetest.register_craft({
-	output = "default:axe_stone",
-	recipe = {
-		{"rocks:sharpened_rock", "rocks:rock", ""},
-		{"rocks:sharpened_rock", "default:stick", ""},
-		{"", "default:stick", ""}
-	}
-})
-
-minetest.register_craft({
-	output = "default:pick_stone",
-	recipe = {
-		{"rocks:sharpened_rock", "rocks:rock", "rocks:sharpened_rock"},
-		{"", "default:stick", ""},
-		{"", "default:stick", ""}
-	}
-})		
-
-minetest.register_craft({
-	output = "default:sword_stone",
-	recipe = {
-		{"", "rocks:sharpened_rock", ""},
-		{"", "rocks:sharpened_rock", ""},
-		{"rocks:rock", "default:stick", "rocks:rock"}
-	}
-})
-
-minetest.register_craft({
 	output = "default:stick 2",
 	recipe = {
 		{"default:dry_shrub"}
@@ -700,13 +701,6 @@ minetest.register_craft({
 	recipe = {
 		{"default:stick","default:stick"},
 		{"default:stick","default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "rocks:rock 4",
-	recipe = {
-		{"default:gravel"}
 	}
 })
 
@@ -756,6 +750,48 @@ minetest.register_craft({
 	output = "rocks:rock_dust",
 	recipe = {
 		{"rocks:sharpened_rock","rocks:sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:desert_sharpened_rock",
+	recipe = {
+		{"rocks:desert_rock","rocks:desert_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:desert_rock_dust",
+	recipe = {
+		{"rocks:desert_sharpened_rock","rocks:desert_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:granite_sharpened_rock",
+	recipe = {
+		{"rocks:granite_rock","rocks:granite_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:granite_rock_dust",
+	recipe = {
+		{"rocks:granite_sharpened_rock","rocks:granite_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:basalt_sharpened_rock",
+	recipe = {
+		{"rocks:basalt_rock","rocks:basalt_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:basalt_rock_dust",
+	recipe = {
+		{"rocks:basalt_sharpened_rock","rocks:basalt_sharpened_rock"}
 	}
 })
 

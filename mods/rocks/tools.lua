@@ -27,3 +27,33 @@ minetest.register_tool("rocks:pick_desert_stone", {
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}
 })
+
+minetest.register_tool("rocks:pick_granite", {
+	description = "Granite Pickaxe",
+	inventory_image = "tool_granite_pick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			cracky = {times={[2]=3.00, [3]=2.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("rocks:pick_basalt", {
+	description = "Basalt Pickaxe",
+	inventory_image = "tool_basalt_pick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			cracky = {times={[2]=3.00, [3]=2.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
