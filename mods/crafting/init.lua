@@ -618,14 +618,14 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "default:clay_lump 8",
 	recipe = {
-		{"rocks:rock_dust", "default:dirt"}
+		{"groups:rock_dust", "default:dirt"}
 	}
 })
 
 minetest.register_craft({
 	output = "default:clay_lump 8",
 	recipe = {
-		{"default:dirt", "rocks:rock_dust"}
+		{"default:dirt", "groups:rock_dust"}
 	}
 })
 
@@ -634,14 +634,14 @@ minetest.register_craft({
 	recipe = {
 		{"default:stick"},
 		{"concrete:concrete_base"},
-		{"bucket:bucket_river_water"}
+		{"bucket:bucket_water"}
 	}
 })
 
 minetest.register_craft({
 	output = "concrete:concrete_base 8",
 	recipe = {
-		{"rocks:rock_dust","default:gravel","rocks:rock_dust"},
+		{"groups::rock_dust","default:gravel","groups:rock_dust"},
 		{"default:sand","default:sand","default:sand"}
 	}
 })
