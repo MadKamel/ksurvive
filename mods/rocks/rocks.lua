@@ -30,6 +30,7 @@ minetest.register_craftitem("rocks:sharpened_rock", {
 minetest.register_craftitem("rocks:rock_dust", {
 	description = "Rock Dust",
 	inventory_image = "rock_dust.png",
+	groups = {rock_dust = 1},
 })
 
 minetest.register_craftitem("rocks:desert_rock", {
@@ -45,6 +46,7 @@ minetest.register_craftitem("rocks:desert_sharpened_rock", {
 minetest.register_craftitem("rocks:desert_rock_dust", {
 	description = "Desert Rock Dust",
 	inventory_image = "desert_rock_dust.png",
+	groups = {rock_dust = 1},
 })
 
 minetest.register_craftitem("rocks:granite_rock", {
@@ -60,6 +62,7 @@ minetest.register_craftitem("rocks:granite_sharpened_rock", {
 minetest.register_craftitem("rocks:granite_rock_dust", {
 	description = "Granite Rock Dust",
 	inventory_image = "granite_rock_dust.png",
+	groups = {rock_dust = 1},
 })
 
 minetest.register_craftitem("rocks:basalt_rock", {
@@ -75,4 +78,5 @@ minetest.register_craftitem("rocks:basalt_sharpened_rock", {
 minetest.register_craftitem("rocks:basalt_rock_dust", {
 	description = "Basalt Rock Dust",
 	inventory_image = "basalt_rock_dust.png",
+	groups = {rock_dust = 1},
 })
