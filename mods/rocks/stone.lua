@@ -1,3 +1,9 @@
+minetest.register_node("rocks:eclogite", {
+	description = "Eclogite",
+	tiles = {"eclogite_stone.png"},
+	groups = {cracky = 2}
+})
+
 minetest.register_node("rocks:granite", {
 	description = "Granite",
 	tiles = {"granite_stone.png"},
