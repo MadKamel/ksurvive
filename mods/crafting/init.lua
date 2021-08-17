@@ -17,6 +17,13 @@ minetest.register_craft({
 		{"rocks:pumice", "rocks:pumice", "rocks:pumice"}
 	}
 }
+		
+minetest.register_craft({
+	output = "rocks:rock_dust",
+	recipe = {
+		{"rocks:pumice"}
+	}
+}
 	
 minetest.register_craft({
 	output = "rocks:basalt_rock 4",
