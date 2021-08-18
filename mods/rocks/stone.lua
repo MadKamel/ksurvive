@@ -1,7 +1,19 @@
+minetest.register_node("rocks:obsidian", {
+	description = "Obsidian",
+	tiles = {"obsidian.png"},
+	groups = {cracky = 1}
+})
+
+minetest.register_node("rocks:obsidian_gravel", {
+	description = "Obsidian Gravel",
+	tiles = {"obsidian_gravel.png"},
+	groups = {cracky = 2, falling_node = 1}
+})
+
 minetest.register_node("rocks:pumice", {
 	description = "Pumice",
 	tiles = {"pumice.png"},
-	groups = {cracky = 3, crumbly = 2, falling_node = 1}
+	groups = {cracky = 3, falling_node = 1}
 })
 
 minetest.register_node("rocks:pumice_compact", {
