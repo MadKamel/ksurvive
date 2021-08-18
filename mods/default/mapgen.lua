@@ -779,13 +779,14 @@ function default.register_biomes()
 
 	minetest.register_biome({
 		name = "granite_peak",
-		--node_dust = "default:snow",
+		node_dust = "default:snow",
 		node_top = "rocks:granite",
 		depth_top = 75,
 		--node_filler = "rocks:granite",
 		--depth_filler = 75,
 		node_riverbed = "default:sand",
 		depth_riverbed = 1,
+		node_cave_liquid = "default:water_source",
 		node_dungeon = "rocks:granite_cobble",
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
