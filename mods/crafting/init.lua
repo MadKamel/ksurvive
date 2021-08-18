@@ -136,7 +136,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "rocks:pick_head_basalt",
 	recipe = {
-		{"rocks:basalt_sharpened_rock", "rocks:granite_rock"}
+		{"rocks:basalt_sharpened_rock", "rocks:basalt_rock"}
 	}
 })
 
