@@ -341,7 +341,7 @@ function default.register_ores()
 		ore            = "rocks:eclogite",
 		wherein        = "rocks:marble",
 		clust_scarcity = 16 * 16 * 16,
-		clust_num_ores = 5,
+		clust_num_ores = 8,
 		clust_size     = 15,
 		y_max          = 31000,
 		y_min          = -31000,
@@ -352,7 +352,7 @@ function default.register_ores()
 		ore            = "rocks:granite_with_tin",
 		wherein        = "rocks:granite",
 		clust_scarcity = 16 * 16 * 16,
-		clust_num_ores = 12,
+		clust_num_ores = 16,
 		clust_size     = 24,
 		y_max          = 31000,
 		y_min          = 0,
@@ -367,6 +367,17 @@ function default.register_ores()
 		clust_size     = 50,
 		y_max          = 31000,
 		y_min          = 0,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "rocks:basalt_gravel",
+		wherein        = "rocks:basalt",
+		clust_scarcity = 4 * 4 * 4,
+		clust_num_ores = 10,
+		clust_size     = 10,
+		y_max          = 31000,
+		y_min          = -31000,
 	})
 
 	-- Stratum ores.
