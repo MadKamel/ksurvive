@@ -160,6 +160,18 @@ default.cool_lava = function(pos, node)
 		{pos = pos, max_hear_distance = 16, gain = 0.25}, true)
 end
 
+default.cool_lava_w_pitch = function(pos, node)
+	if node.name == "default:lava_source" then
+		minetest.set_node(pos, {name = "rocks:obsidian"})
+--		minetest.set_node(pos, {name = "default:obsidian"})
+	else -- Lava flowing
+		minetest.set_node(pos, {name = "rocks:obsidian"})
+--		minetest.set_node(pos, {name = "default:stone"})
+	end
+	minetest.sound_play("default_cool_lava",
+		{pos = pos, max_hear_distance = 16, gain = 0.25}, true)
+end
+
 if minetest.settings:get_bool("enable_lavacooling") ~= false then
 	minetest.register_abm({
 		label = "Lava cooling",
@@ -172,6 +184,18 @@ if minetest.settings:get_bool("enable_lavacooling") ~= false then
 			default.cool_lava(...)
 		end,
 	})
+       
+    minetest.register_abm({
+        label = "Lava cooling w/ pitch",
+        nodenames = {"default:lava_source", "default:lava_flowing"},
+        neighbors = {"pitch:pitch_flowing", "pitch:pitch_source"},
+        interval = 2,
+        chance = 2,
+        catch_up = false,
+        action = function(...)
+            default.cool_lava_w_pitch(...)
+        end,
+    })
 end
 
 
