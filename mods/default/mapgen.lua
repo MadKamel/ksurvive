@@ -346,6 +346,16 @@ function default.register_ores()
 		y_max          = -28,
 		y_min          = -31000,
 	})
+	
+	minetest.register_ore({
+		ore_type        = "stratum",
+		ore             = "rocks:oil_shale",
+		wherein         = {"default:stone", "rocks:basalt", "default:desert_stone"},
+		y_max = -7,
+		y_min = -13,
+		stratum_thickness = 3,
+		biomes = {"granite_peak"}
+	})
 
 	minetest.register_ore({
 		ore_type       = "scatter",
