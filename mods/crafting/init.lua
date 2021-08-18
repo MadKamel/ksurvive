@@ -798,6 +798,15 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "adze:obsidian_adze",
+	recipe = {
+		{"rocks:obsidian_shard", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
 --minetest.register_craft({
 --	output = "foodstuff:stewed_mushroom_brown",
 --	recipe = {
