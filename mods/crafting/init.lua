@@ -113,6 +113,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "rocks:axe_stone",
+	recipe = {
+		{"rocks:axe_head_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_desert_stone",
+	recipe = {
+		{"rocks:axe_head_desert_stone"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_granite",
+	recipe = {
+		{"rocks:axe_head_granite"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_basalt",
+	recipe = {
+		{"rocks:axe_head_basalt"},
+		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
 	output = "rocks:pick_head_stone",
 	recipe = {
 		{"rocks:sharpened_rock", "rocks:rock"}
@@ -164,6 +196,38 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "rocks:shovel_head_basalt",
 	recipe = {
+		{"rocks:basalt_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_head_stone",
+	recipe = {
+		{"rocks:sharpened_rock"},
+		{"rocks:sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_head_desert_stone",
+	recipe = {
+		{"rocks:desert_sharpened_rock"},
+		{"rocks:desert_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_head_granite",
+	recipe = {
+		{"rocks:granite_sharpened_rock"},
+		{"rocks:granite_sharpened_rock"}
+	}
+})
+
+minetest.register_craft({
+	output = "rocks:axe_head_basalt",
+	recipe = {
+		{"rocks:basalt_sharpened_rock"},
 		{"rocks:basalt_sharpened_rock"}
 	}
 })
