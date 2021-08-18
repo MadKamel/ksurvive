@@ -28,6 +28,21 @@ minetest.register_node("rocks:eclogite", {
 	groups = {cracky = 2}
 })
 
+minetest.register_node("rocks:oil_shale", {
+	description = "Oil Shale",
+	tiles = {"oil_shale_stone.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "rocks:oil_shale_cobble",
+	legacy_mineral = true,
+})
+
+minetest.register_node("rocks:oil_shale_cobble", {
+	description = "Oil Shale Cobblestone",
+	tiles = {"oil_shale_cobble.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+})
+
 minetest.register_node("rocks:granite", {
 	description = "Granite",
 	tiles = {"granite_stone.png"},
