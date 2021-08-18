@@ -339,11 +339,11 @@ function default.register_ores()
 	minetest.register_ore({
 		ore_type       = "scatter",
 		ore            = "rocks:eclogite",
-		wherein        = "rocks:marble",
-		clust_scarcity = 16 * 16 * 16,
-		clust_num_ores = 8,
+		wherein        = "default:stone",
+		clust_scarcity = 12 * 12 * 12,
+		clust_num_ores = 15,
 		clust_size     = 15,
-		y_max          = 31000,
+		y_max          = -28,
 		y_min          = -31000,
 	})
 
@@ -351,7 +351,7 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "rocks:granite_with_tin",
 		wherein        = "rocks:granite",
-		clust_scarcity = 16 * 16 * 16,
+		clust_scarcity = 10 * 10 * 10,
 		clust_num_ores = 16,
 		clust_size     = 24,
 		y_max          = 31000,
@@ -362,7 +362,7 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "rocks:granite_with_iron",
 		wherein        = "rocks:granite",
-		clust_scarcity = 24 * 24 * 24,
+		clust_scarcity = 16 * 16 * 16,
 		clust_num_ores = 25,
 		clust_size     = 50,
 		y_max          = 31000,
