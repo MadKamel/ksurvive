@@ -3,12 +3,19 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
-	output = "rocks:obsidian_shard 4",
+	output = "rocks:obsidian_shard 8",
 	recipe = {
 		{"rocks:obsidian"} 
 	}
 }
 
+	minetest.register_craft({
+	output = "rocks:obsidian_shard 4",
+	recipe = {
+		{"rocks:obsidian_gravel"} 
+	}
+}
+	
 minetest.register_craft({
 	output = "default:chest",
 	recipe = {
