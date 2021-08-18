@@ -67,7 +67,7 @@ minetest.register_node("furniture:iron_chair", {
 			{-0.3125, -0.5, 0.1875, -0.1875, 0.5, 0.3125},
 		},
 	},
-	groups = {falling_node = 1, cracky = 3},
+	groups = {falling_node = 1, dig_immediate = 3},
 })
 
 
@@ -104,7 +104,7 @@ minetest.register_node("furniture:copper_chair", {
 			{-0.3125, -0.5, 0.1875, -0.1875, 0.5, 0.3125},
 		},
 	},
-	groups = {falling_node = 1, cracky = 3},
+	groups = {falling_node = 1, dig_immediate = 3},
 })
 
 
@@ -141,5 +141,5 @@ minetest.register_node("furniture:tin_chair", {
 			{-0.3125, -0.5, 0.1875, -0.1875, 0.5, 0.3125},
 		},
 	},
-	groups = {falling_node = 1, cracky = 3},
+	groups = {falling_node = 1, dig_immediate = 3},
 })

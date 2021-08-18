@@ -97,7 +97,7 @@ minetest.register_tool("adze:obsidian_adze", {
 			crumbly = {times={[1]=1.75, [2]=0.75, [3]=0.15}, uses=50, maxlevel=1},
 			choppy = {times={[1]=1.25, [2]=0.80, [3]=0.40}, uses=50, maxlevel=1},
 			snappy = {times={[1]=0.80, [2]=0.40, [3]=0.10}, uses=50, maxlevel=1},
-			cracky = {times={[3]=1.50, [2]=0.90[3]=0.75}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.50, [2]=0.90, [3]=0.75}, uses=50, maxlevel=1},
 		},
 		damage_groups = {fleshy=4},
 	},

@@ -7,7 +7,7 @@ minetest.register_node("rocks:obsidian", {
 minetest.register_node("rocks:obsidian_gravel", {
 	description = "Obsidian Gravel",
 	tiles = {"obsidian_gravel.png"},
-	groups = {cracky = 2, falling_node = 1}
+	groups = {crumbly = 1, falling_node = 1}
 })
 
 minetest.register_node("rocks:pumice", {

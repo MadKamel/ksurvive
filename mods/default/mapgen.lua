@@ -354,7 +354,7 @@ function default.register_ores()
 		y_max = -7,
 		y_min = -13,
 		stratum_thickness = 3,
-		biomes = {"granite_peak"}
+		biomes = {"basalt_fields"}
 	})
 
 	minetest.register_ore({
