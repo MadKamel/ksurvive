@@ -110,27 +110,14 @@ Ores
 (1. In stone 2. Blocks)
 
 default:stone_with_coal
-default:coalblock
 
 default:stone_with_iron
-default:steelblock
 
 default:stone_with_copper
-default:copperblock
 
 default:stone_with_tin
-default:tinblock
-
-default:bronzeblock
 
 default:stone_with_gold
-default:goldblock
-
-default:stone_with_mese
-default:mese
-
-default:stone_with_diamond
-default:diamondblock
 
 Plantlife
 ---------
@@ -1186,15 +1173,15 @@ minetest.register_node("default:aspen_sapling", {
 minetest.register_node("default:stone_with_coal", {
 	description = S("Coal Ore"),
 	tiles = {"default_stone.png^default_mineral_coal.png"},
-	groups = {cracky = 2},
-	drop = {"default:coal_lump"},
+	groups = {cracky = 3},
+	drop = "default:coal_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("default:stone_with_iron", {
 	description = S("Iron Ore"),
 	tiles = {"default_stone.png^default_mineral_iron.png"},
-	groups = {cracky = 2},
+	groups = {cracky = 3},
 	drop = "default:iron_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -1202,7 +1189,7 @@ minetest.register_node("default:stone_with_iron", {
 minetest.register_node("default:stone_with_copper", {
 	description = S("Copper Ore"),
 	tiles = {"default_stone.png^default_mineral_copper.png"},
-	groups = {cracky = 2},
+	groups = {cracky = 3},
 	drop = "default:copper_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -1210,42 +1197,16 @@ minetest.register_node("default:stone_with_copper", {
 minetest.register_node("default:stone_with_tin", {
 	description = S("Tin Ore"),
 	tiles = {"default_stone.png^default_mineral_tin.png"},
-	groups = {cracky = 2},
+	groups = {cracky = 3},
 	drop = "default:tin_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
-
-minetest.register_node("default:stone_with_mese", {
-	description = S("Mese Ore"),
-	tiles = {"default_stone.png^default_mineral_mese.png"},
-	groups = {cracky = 1},
-	drop = "default:mese_crystal",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:mese", {
-	description = S("Mese Block"),
-	tiles = {"default_mese_block.png"},
-	paramtype = "light",
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_stone_defaults(),
-	light_source = 3,
-})
-
 
 minetest.register_node("default:stone_with_gold", {
 	description = S("Gold Ore"),
 	tiles = {"default_stone.png^default_mineral_gold.png"},
 	groups = {cracky = 2},
 	drop = "default:gold_lump",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:stone_with_diamond", {
-	description = S("Diamond Ore"),
-	tiles = {"default_stone.png^default_mineral_diamond.png"},
-	groups = {cracky = 1},
-	drop = "default:diamond",
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -2510,71 +2471,6 @@ minetest.register_node("default:bookshelf", {
 		minetest.remove_node(pos)
 		return drops
 	end,
-})
-
-local function register_sign(material, desc, def)
-	minetest.register_node("default:sign_wall_" .. material, {
-		description = desc,
-		drawtype = "nodebox",
-		tiles = {"default_sign_wall_" .. material .. ".png"},
-		inventory_image = "default_sign_" .. material .. ".png",
-		wield_image = "default_sign_" .. material .. ".png",
-		paramtype = "light",
-		paramtype2 = "wallmounted",
-		sunlight_propagates = true,
-		is_ground_content = false,
-		walkable = false,
-		use_texture_alpha = "opaque",
-		node_box = {
-			type = "wallmounted",
-			wall_top    = {-0.4375, 0.4375, -0.3125, 0.4375, 0.5, 0.3125},
-			wall_bottom = {-0.4375, -0.5, -0.3125, 0.4375, -0.4375, 0.3125},
-			wall_side   = {-0.5, -0.3125, -0.4375, -0.4375, 0.3125, 0.4375},
-		},
-		groups = def.groups,
-		legacy_wallmounted = true,
-		sounds = def.sounds,
-
-		on_construct = function(pos)
-			local meta = minetest.get_meta(pos)
-			meta:set_string("formspec", "field[text;;${text}]")
-		end,
-		on_receive_fields = function(pos, formname, fields, sender)
-			local player_name = sender:get_player_name()
-			if minetest.is_protected(pos, player_name) then
-				minetest.record_protection_violation(pos, player_name)
-				return
-			end
-			local text = fields.text
-			if not text then
-				return
-			end
-			if string.len(text) > 512 then
-				minetest.chat_send_player(player_name, S("Text too long"))
-				return
-			end
-			minetest.log("action", player_name .. " wrote \"" .. text ..
-				"\" to the sign at " .. minetest.pos_to_string(pos))
-			local meta = minetest.get_meta(pos)
-			meta:set_string("text", text)
-
-			if #text > 0 then
-				meta:set_string("infotext", S('"@1"', text))
-			else
-				meta:set_string("infotext", '')
-			end
-		end,
-	})
-end
-
-register_sign("wood", S("Wooden Sign"), {
-	sounds = default.node_sound_wood_defaults(),
-	groups = {choppy = 2, attached_node = 1, flammable = 2, oddly_breakable_by_hand = 3}
-})
-
-register_sign("steel", S("Steel Sign"), {
-	sounds = default.node_sound_metal_defaults(),
-	groups = {cracky = 2, attached_node = 1}
 })
 
 minetest.register_node("default:ladder_wood", {
