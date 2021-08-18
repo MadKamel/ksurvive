@@ -839,11 +839,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "furniture:chair",
+	output = "furniture:chair 4",
 	recipe = {
 		{"default:stick","",""},
 		{"default:wood","default:wood",""},
 		{"default:stick","default:stick",""}
+	}
+})
+
+minetest.register_craft({
+	output = "furniture:iron_chair 4",
+	recipe = {
+		{"metals:iron_stick","",""},
+		{"metals:iron_block","metals:iron_block",""},
+		{"metals:iron_stick","metals:iron_stick",""}
+	}
+})
+
+minetest.register_craft({
+	output = "furniture:copper_chair 4",
+	recipe = {
+		{"metals:copper_stick","",""},
+		{"metals:copper_block","metals:copper_block",""},
+		{"metals:copper_stick","metals:copper_stick",""}
+	}
+})
+
+minetest.register_craft({
+	output = "furniture:tin_chair 4",
+	recipe = {
+		{"metals:tin_stick","",""},
+		{"metals:tin_block","metals:tin_block",""},
+		{"metals:tin_stick","metals:tin_stick",""}
 	}
 })
 
