@@ -3,7 +3,16 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
-	output = "rocks:pumice_compact",
+	output = "default:chest",
+	recipe = {
+		{"group:wood", "group:wood", "group:wood"},
+		{"group:wood", "", "group:wood"},
+		{"group:wood", "group:wood", "group:wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "letters:paper_sign",
 	recipe = {
 		{"default:stick", "default:paper", "default:stick"},
 		{"default:stick", "default:paper", "default:stick"},
