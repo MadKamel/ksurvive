@@ -1,7 +1,7 @@
 minetest.register_node("letters:paper_sign", {
 	description = "Paper Sign",
 	drawtype = "nodebox",
-	tiles = {"paper_sign.png"},
+	tiles = {"paper_sign_wall.png"},
 	inventory_image = "paper_sign.png",
 	wield_image = "paper_sign.png",
 	paramtype = "light",
