@@ -3,6 +3,7 @@ minetest.register_craftitem("rocks:obsidian_shard", {
 	inventory_image = "obsidian_shard.png"
 })
 
+
 minetest.register_craftitem("rocks:pick_head_stone", {
 	description = "Stone Pickaxe Head",
 	inventory_image = "toolhead_stone_pick.png"
