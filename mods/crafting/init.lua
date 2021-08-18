@@ -1044,8 +1044,6 @@ minetest.register_craft({
 	}
 })
 
--- TODO: Add Desert rock, Granite rock and Basalt rock recipes.
-
 minetest.register_craft({
 	output = "default:sand 2",
 	recipe = {
