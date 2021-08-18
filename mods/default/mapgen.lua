@@ -380,6 +380,28 @@ function default.register_ores()
 		y_min          = -31000,
 	})
 
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "rocks:pumice",
+		wherein        = "rocks:basalt",
+		clust_scarcity = 9 * 9 * 9,
+		clust_num_ores = 15,
+		clust_size     = 15,
+		y_max          = 31000,
+		y_min          = -31000,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "rocks:pumice_compact",
+		wherein        = "rocks:pumice",
+		clust_scarcity = 2 * 2 * 2,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = 31000,
+		y_min          = -5
+	})
+
 	-- Stratum ores.
 	-- These obviously first.
 
@@ -758,7 +780,7 @@ function default.register_biomes()
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
-		y_min = 75,
+		y_min = 58,
 		heat_point = 25,
 		humidity_point = 15,
 	})

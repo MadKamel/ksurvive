@@ -762,6 +762,33 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "adze:desert_stone_adze",
+	recipe = {
+		{"rocks:desert_sharpened_rock", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:granite_adze",
+	recipe = {
+		{"rocks:granite_sharpened_rock", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:basalt_adze",
+	recipe = {
+		{"rocks:basalt_sharpened_rock", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
 --minetest.register_craft({
 --	output = "foodstuff:stewed_mushroom_brown",
 --	recipe = {
@@ -791,15 +818,6 @@ minetest.register_craft({
 	output = "default:clay_lump 8",
 	recipe = {
 		{"default:dirt", "groups:rock_dust"}
-	}
-})
-
-minetest.register_craft({
-	output = "concrete:concrete_mix",
-	recipe = {
-		{"default:stick"},
-		{"concrete:concrete_base"},
-		{"bucket:bucket_water"}
 	}
 })
 
