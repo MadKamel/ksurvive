@@ -244,7 +244,7 @@ end
 --
 
 minetest.register_node("default:stone", {
-	description = S("Stone"),
+	description = S("Feldspar"),
 	tiles = {"default_stone.png"},
 	groups = {cracky = 3, stone = 1},
 	drop = "default:cobble",
@@ -253,7 +253,7 @@ minetest.register_node("default:stone", {
 })
 
 minetest.register_node("default:cobble", {
-	description = S("Cobblestone"),
+	description = S("Feldspar Cobblestone"),
 	tiles = {"default_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -261,7 +261,7 @@ minetest.register_node("default:cobble", {
 })
 
 minetest.register_node("default:mossycobble", {
-	description = S("Mossy Cobblestone"),
+	description = S("Mossy Feldspar Cobblestone"),
 	tiles = {"default_mossycobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 1},
@@ -270,7 +270,7 @@ minetest.register_node("default:mossycobble", {
 
 
 minetest.register_node("default:desert_stone", {
-	description = S("Desert Stone"),
+	description = S("Desert Feldspar"),
 	tiles = {"default_desert_stone.png"},
 	groups = {cracky = 3, stone = 1},
 	drop = "default:desert_cobble",
@@ -279,7 +279,7 @@ minetest.register_node("default:desert_stone", {
 })
 
 minetest.register_node("default:desert_cobble", {
-	description = S("Desert Cobblestone"),
+	description = S("Desert Feldspar Cobblestone"),
 	tiles = {"default_desert_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -308,14 +308,6 @@ minetest.register_node("default:silver_sandstone", {
 	tiles = {"default_silver_sandstone.png"},
 	groups = {crumbly = 1, cracky = 3},
 	sounds = default.node_sound_stone_defaults(),
-})
-
-
-minetest.register_node("default:obsidian", {
-	description = S("Obsidian"),
-	tiles = {"default_obsidian.png"},
-	sounds = default.node_sound_stone_defaults(),
-	groups = {cracky = 1, level = 2},
 })
 
 
@@ -386,7 +378,7 @@ minetest.register_node("default:silver_sand", {
 
 
 minetest.register_node("default:gravel", {
-	description = S("Gravel"),
+	description = S("Feldspar Gravel"),
 	tiles = {"default_gravel.png"},
 	groups = {crumbly = 2, falling_node = 1},
 	sounds = default.node_sound_gravel_defaults(),
@@ -473,7 +465,7 @@ minetest.register_node("default:cave_ice", {
 --
 
 minetest.register_node("default:tree", {
-	description = S("Apple Tree"),
+	description = S("Tree"),
 	tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -484,7 +476,7 @@ minetest.register_node("default:tree", {
 })
 
 minetest.register_node("default:wood", {
-	description = S("Apple Wood Planks"),
+	description = S("Wood Planks"),
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"default_wood.png"},
@@ -494,7 +486,7 @@ minetest.register_node("default:wood", {
 })
 
 minetest.register_node("default:sapling", {
-	description = S("Apple Tree Sapling"),
+	description = S("Tree Sapling"),
 	drawtype = "plantlike",
 	tiles = {"default_sapling.png"},
 	inventory_image = "default_sapling.png",
@@ -530,7 +522,7 @@ minetest.register_node("default:sapling", {
 })
 
 minetest.register_node("default:leaves", {
-	description = S("Apple Tree Leaves"),
+	description = S("Leaves"),
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"default_leaves.png"},
@@ -1040,7 +1032,7 @@ minetest.register_node("default:blueberry_bush_sapling", {
 --
 
 minetest.register_node("default:water_source", {
-	description = S("Water Source"),
+	description = S("Water Source Node"),
 	drawtype = "liquid",
 	waving = 3,
 	tiles = {
@@ -1084,7 +1076,7 @@ minetest.register_node("default:water_source", {
 })
 
 minetest.register_node("default:water_flowing", {
-	description = S("Flowing Water"),
+	description = S("Water Flowing Node"),
 	drawtype = "flowingliquid",
 	waving = 3,
 	tiles = {"default_water.png"},
@@ -1132,7 +1124,7 @@ minetest.register_node("default:water_flowing", {
 
 
 minetest.register_node("default:river_water_source", {
-	description = S("River Water Source"),
+	description = S("River Water Source Node"),
 	drawtype = "liquid",
 	tiles = {
 		{
@@ -1181,7 +1173,7 @@ minetest.register_node("default:river_water_source", {
 })
 
 minetest.register_node("default:river_water_flowing", {
-	description = S("Flowing River Water"),
+	description = S("River Water Flowing Node"),
 	drawtype = "flowingliquid",
 	tiles = {"default_river_water.png"},
 	special_tiles = {
@@ -1230,7 +1222,7 @@ minetest.register_node("default:river_water_flowing", {
 
 
 minetest.register_node("default:lava_source", {
-	description = S("Lava Source"),
+	description = S("Lava Source Node"),
 	drawtype = "liquid",
 	tiles = {
 		{
@@ -1274,7 +1266,7 @@ minetest.register_node("default:lava_source", {
 })
 
 minetest.register_node("default:lava_flowing", {
-	description = S("Flowing Lava"),
+	description = S("Lava Flowing Node"),
 	drawtype = "flowingliquid",
 	tiles = {"default_lava.png"},
 	special_tiles = {
