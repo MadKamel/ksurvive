@@ -1,4 +1,4 @@
-local growthrate = 0.5
+local growthrate = 2
 local growchance = 25
 
 minetest.register_abm({

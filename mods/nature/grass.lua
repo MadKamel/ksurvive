@@ -94,7 +94,7 @@ minetest.register_node("nature:bahia_4", {
     drop = {
 		max_items = 2,
 		items = {
-			{items = {"nature:bahia_0"}},
+			{items = {"nature:bahia_0 4"}},
 			{items = {"nature:bahia"}}
 		}
 	}
