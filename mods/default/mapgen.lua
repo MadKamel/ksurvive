@@ -713,10 +713,10 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_copper",
 		wherein        = "default:stone",
-		clust_scarcity = 12 * 12 * 12,
+		clust_scarcity = 8 * 8 * 8,
 		clust_num_ores = 4,
 		clust_size     = 3,
-		y_max          = -64,
+		y_max          = -29,
 		y_min          = -127,
 	})
 
@@ -748,10 +748,10 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
-		clust_scarcity = 7 * 7 * 7,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -128,
+		clust_scarcity = 6 * 6 * 6,
+		clust_num_ores = 18,
+		clust_size     = 4,
+		y_max          = -5,
 		y_min          = -255,
 	})
 
@@ -975,6 +975,26 @@ end
 -- Mgv6
 
 function default.register_mgv6_decorations()
+
+	-- KSurvive nature mod flowers
+
+	minetest.register_decoration({
+		name = "nature:black_tulip_4",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 58,
+		y_min = 1,
+		decoration = "nature:black_tulip_4",
+	})
 
 	-- Papyrus
 
