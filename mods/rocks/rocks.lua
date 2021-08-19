@@ -18,17 +18,17 @@
 --})
 
 minetest.register_craftitem("rocks:rock", {
-	description = "Rock",
+	description = "Feldspar Rock",
 	inventory_image = "rock.png",
 })
 
 minetest.register_craftitem("rocks:sharpened_rock", {
-	description = "Sharpened Rock",
+	description = "Feldspar Sharpened Rock",
 	inventory_image = "sharpened_rock.png",
 })
 
 minetest.register_craftitem("rocks:rock_dust", {
-	description = "Rock Dust",
+	description = "Feldspar Rock Dust",
 	inventory_image = "rock_dust.png",
 	groups = {rock_dust = 1},
 })

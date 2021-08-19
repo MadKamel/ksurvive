@@ -29,3 +29,11 @@ minetest.register_node("rocks:granite_with_tin", {
 	drop = "default:tin_lump",
 	legacy_mineral = true,
 })
+
+minetest.register_node("rocks:basalt_with_coal", {
+	description = "Basalt with Coal",
+	tiles = {"basalt_stone.png^default_mineral_coal.png"},
+	groups = {cracky = 3},
+	drop = "default:coal_lump",
+	legacy_mineral = true,
+})

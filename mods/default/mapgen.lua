@@ -352,7 +352,7 @@ function default.register_ores()
 		ore             = "rocks:oil_shale",
 		wherein         = {"default:stone", "rocks:basalt", "default:desert_stone"},
 		y_max = -7,
-		y_min = -13,
+		y_min = -10,
 		stratum_thickness = 3,
 		biomes = {"basalt_fields"}
 	})
@@ -374,9 +374,47 @@ function default.register_ores()
 		wherein        = "rocks:granite",
 		clust_scarcity = 16 * 16 * 16,
 		clust_num_ores = 25,
-		clust_size     = 50,
+		clust_size     = 4,
 		y_max          = 31000,
 		y_min          = 0,
+	})
+
+	minetest.register_ore({
+		ore_type        = "blob",
+		ore             = "rocks:obsidian_gravel",
+		wherein         = {"rocks:basalt"},
+		clust_scarcity  = 16 * 16 * 16,
+		clust_size      = 5,
+		y_max           = 31000,
+		y_min           = -31000,
+		noise_threshold = 0.0,
+		noise_params    = {
+			offset = 0.5,
+			scale = 0.2,
+			spread = {x = 5, y = 5, z = 5},
+			seed = 766,
+			octaves = 1,
+			persist = 0.0
+		},
+	})
+
+	minetest.register_ore({
+		ore_type        = "blob",
+		ore             = "rocks:obsidian",
+		wherein         = {"rocks:basalt"},
+		clust_scarcity  = 32 * 32 * 32,
+		clust_size      = 10,
+		y_max           = 31000,
+		y_min           = -31000,
+		noise_threshold = 0.0,
+		noise_params    = {
+			offset = 0.5,
+			scale = 0.1,
+			spread = {x = 5, y = 5, z = 5},
+			seed = 766,
+			octaves = 1,
+			persist = 0.0
+		},
 	})
 
 	minetest.register_ore({
@@ -786,14 +824,13 @@ function default.register_biomes()
 		--depth_filler = 75,
 		node_riverbed = "default:sand",
 		depth_riverbed = 1,
-		node_cave_liquid = "default:water_source",
 		node_dungeon = "rocks:granite_cobble",
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
-		y_min = 58,
-		heat_point = 25,
-		humidity_point = 15,
+		y_min = 52,
+		heat_point = 50,
+		humidity_point = 35,
 	})
 
 	-- Grassland

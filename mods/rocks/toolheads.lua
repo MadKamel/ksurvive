@@ -5,12 +5,12 @@ minetest.register_craftitem("rocks:obsidian_shard", {
 
 
 minetest.register_craftitem("rocks:pick_head_stone", {
-	description = "Stone Pickaxe Head",
+	description = "Feldspar Pickaxe Head",
 	inventory_image = "toolhead_stone_pick.png"
 })
 
 minetest.register_craftitem("rocks:pick_head_desert_stone", {
-	description = "Desert Stone Pickaxe Head",
+	description = "Desert Feldspar Pickaxe Head",
 	inventory_image = "toolhead_desertstone_pick.png"
 })
 
@@ -27,12 +27,12 @@ minetest.register_craftitem("rocks:pick_head_basalt", {
 
 
 minetest.register_craftitem("rocks:shovel_head_stone", {
-	description = "Stone Shovel Head",
+	description = "Feldspar Shovel Head",
 	inventory_image = "toolhead_stone_shovel.png"
 })
 
 minetest.register_craftitem("rocks:shovel_head_desert_stone", {
-	description = "Desert Stone Shovel Head",
+	description = "Desert Feldspar Shovel Head",
 	inventory_image = "toolhead_desertstone_shovel.png"
 })
 
@@ -49,12 +49,12 @@ minetest.register_craftitem("rocks:shovel_head_basalt", {
 
 
 minetest.register_craftitem("rocks:axe_head_stone", {
-	description = "Stone Axe Head",
+	description = "Feldspar Axe Head",
 	inventory_image = "toolhead_stone_axe.png"
 })
 
 minetest.register_craftitem("rocks:axe_head_desert_stone", {
-	description = "Desert Stone Axe Head",
+	description = "Desert Feldspar Axe Head",
 	inventory_image = "toolhead_desertstone_axe.png"
 })
 

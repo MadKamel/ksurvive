@@ -1,6 +1,6 @@
 -- Pickaxes
 minetest.register_tool("rocks:pick_stone", {
-	description = "Stone Pickaxe",
+	description = "Feldspar Pickaxe",
 	inventory_image = "tool_stone_pick.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -15,7 +15,7 @@ minetest.register_tool("rocks:pick_stone", {
 })
 
 minetest.register_tool("rocks:pick_desert_stone", {
-	description = "Desert Stone Pickaxe",
+	description = "Desert Feldspar Pickaxe",
 	inventory_image = "tool_desertstone_pick.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -64,7 +64,7 @@ minetest.register_tool("rocks:pick_basalt", {
 
 -- Shovels
 minetest.register_tool("rocks:shovel_stone", {
-	description = "Stone Shovel",
+	description = "Feldspar Shovel",
 	inventory_image = "tool_stone_shovel.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -79,7 +79,7 @@ minetest.register_tool("rocks:shovel_stone", {
 })
 
 minetest.register_tool("rocks:shovel_desert_stone", {
-	description = "Desert Stone Shovel",
+	description = "Desert Feldspar Shovel",
 	inventory_image = "tool_desertstone_shovel.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -128,7 +128,7 @@ minetest.register_tool("rocks:shovel_granite", {
 
 -- Axes
 minetest.register_tool("rocks:axe_stone", {
-	description = "Stone Axe",
+	description = "Feldspar Axe",
 	inventory_image = "tool_stone_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -143,7 +143,7 @@ minetest.register_tool("rocks:axe_stone", {
 })
 
 minetest.register_tool("rocks:axe_desert_stone", {
-	description = "Desert Stone Axe",
+	description = "Desert Feldspar Axe",
 	inventory_image = "tool_desertstone_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
