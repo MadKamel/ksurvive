@@ -77,7 +77,7 @@ minetest.register_node("nature:black_tulip_3", {
 })
 
 minetest.register_node("nature:black_tulip_4", {
-	description = "Black Tulip",
+	description = "Mature Black Tulip",
 	drawtype = "plantlike",
 	waving = 1,
 	tiles = {"black_tulip_4.png"},
