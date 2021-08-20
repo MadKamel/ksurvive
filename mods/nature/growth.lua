@@ -158,3 +158,52 @@ minetest.register_abm({
         minetest.set_node(pos, {name = "nature:juncus_4"})
     end
 })
+
+-- This is for the bouteloua growth cycle.
+minetest.register_abm({
+    nodenames = {"nature:bouteloua_0"},
+    neighbors = {"group:sand"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:bouteloua_1"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:bouteloua_1"},
+    neighbors = {"group:sand"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:bouteloua_2"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:bouteloua_2"},
+    neighbors = {"group:sand"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:bouteloua_3"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:bouteloua_3"},
+    neighbors = {"group:sand"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:bouteloua_4"})
+    end
+})
