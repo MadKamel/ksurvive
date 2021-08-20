@@ -212,7 +212,7 @@ minetest.register_node("nature:juncus", {
 		items = {
 			{items = {"nature:juncus_0 2"}},
 			{items = {"nature:juncus_0"}, rarity = 2},
-			{items = {"nature:juncus_stalk"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
+			{items = {"nature:juncus_stalk"}}
 		}
 	},
 })

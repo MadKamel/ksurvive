@@ -864,8 +864,8 @@ function default.register_biomes()
 		vertical_blend = 1,
 		y_max = 2,
 		y_min = -2,
-		heat_point = 55,
-		humidity_point = 50,
+		heat_point = 58,
+		humidity_point = 35,
 	})
 
 	minetest.register_biome({
@@ -997,13 +997,31 @@ function default.register_mgv6_decorations()
 	})
 
 	minetest.register_decoration({
+		name = "default:bouteloua",
+		deco_type = "simple",
+		place_on = {"default:desert_sand", "default:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.008,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 1,
+		y_min = 1,
+		decoration = "nature:bouteloua",
+	})
+
+	minetest.register_decoration({
 		name = "default:bahiagrass",
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
-			scale = 0.01,
+			scale = 0.1,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 329,
 			octaves = 3,
@@ -1011,7 +1029,7 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 52,
 		y_min = 1,
-		decoration = "nature:bahia_4",
+		decoration = "nature:bahia",
 	})
 
 	minetest.register_decoration({
@@ -1021,7 +1039,7 @@ function default.register_mgv6_decorations()
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
-			scale = 0.03,
+			scale = 0.01,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 329,
 			octaves = 3,
@@ -1029,7 +1047,7 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 1,
 		y_min = 1,
-		decoration = "nature:juncus_4",
+		decoration = "nature:juncus",
 	})
 
 	-- Papyrus
@@ -1128,7 +1146,18 @@ function default.register_decorations()
 		fill_ratio = 0.1,
 		y_max = 60,
 		y_min = 1,
-		decoration = "nature:bahia_4",
+		decoration = "nature:bahia",
+	})
+
+	minetest.register_decoration({
+		name = "default:bouteloua",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 80,
+		fill_ratio = 0.1,
+		y_max = 60,
+		y_min = 1,
+		decoration = "nature:bouteloua",
 	})
 
 	minetest.register_decoration({
@@ -1139,7 +1168,7 @@ function default.register_decorations()
 		fill_ratio = 0.3,
 		y_max = 1,
 		y_min = 1,
-		decoration = "nature:juncus_4",
+		decoration = "nature:juncus",
 	})
 
 	-- Apple tree and log

@@ -42,10 +42,8 @@ function pollinate(pos, node)
 			local soil_name = minetest.get_node(soil).name
 			local soil_above = {x = soil.x, y = soil.y + 1, z = soil.z}
 			light = minetest.get_node_light(soil_above)
-			if light and light >= light_minimum and
-					-- Only spread to same surface node
-					soil_name == under.name then
-				minetest.set_node(soil_above, {name = node.name..'0'})
+			if light and light >= light_minimum and soil_name == under.name then
+				minetest.set_node(soil_above, {name = node.name.."_0"})
 			end
 		end
 	end
