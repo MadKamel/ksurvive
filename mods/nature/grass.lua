@@ -81,7 +81,7 @@ minetest.register_node("nature:bahia_3", {
 	drop = {}
 })
 
-minetest.register_node("nature:bahia_4", {
+minetest.register_node("nature:bahia", {
 	description = "Mature Bahiagrass",
 	drawtype = "plantlike",
 	waving = 1,
@@ -190,7 +190,7 @@ minetest.register_node("nature:juncus_3", {
 	drop = {}
 })
 
-minetest.register_node("nature:juncus_4", {
+minetest.register_node("nature:juncus", {
 	description = "Mature Juncus Grass",
 	drawtype = "plantlike",
 	waving = 1,
@@ -299,7 +299,7 @@ minetest.register_node("nature:bouteloua_3", {
 	drop = {}
 })
 
-minetest.register_node("nature:bouteloua_3", {
+minetest.register_node("nature:bouteloua", {
 	description = "Mature Bouteloua",
 	drawtype = "plantlike",
 	waving = 1,
