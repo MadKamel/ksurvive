@@ -51,7 +51,7 @@ minetest.register_abm({
     action = function(pos, node, active_object_count,
             active_object_count_wider)
         local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "nature:black_tulip_4"})
+        minetest.set_node(pos, {name = "nature:black_tulip"})
     end
 })
 
@@ -103,7 +103,7 @@ minetest.register_abm({
     action = function(pos, node, active_object_count,
             active_object_count_wider)
         local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "nature:bahia_4"})
+        minetest.set_node(pos, {name = "nature:bahia"})
     end
 })
 
@@ -155,7 +155,7 @@ minetest.register_abm({
     action = function(pos, node, active_object_count,
             active_object_count_wider)
         local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "nature:juncus_4"})
+        minetest.set_node(pos, {name = "nature:juncus"})
     end
 })
 
@@ -204,6 +204,6 @@ minetest.register_abm({
     action = function(pos, node, active_object_count,
             active_object_count_wider)
         local pos = {x = pos.x, y = pos.y, z = pos.z}
-        minetest.set_node(pos, {name = "nature:bouteloua_4"})
+        minetest.set_node(pos, {name = "nature:bouteloua"})
     end
 })
