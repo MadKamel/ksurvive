@@ -29,7 +29,7 @@ function nature.pollinate(pos, node)
 	local pos1 = vector.add(pos, 4)
 	-- Testing shows that a threshold of 3 results in an appropriate maximum
 	-- density of approximately 7 flora per 9x9 area.
-	if #minetest.find_nodes_in_area(pos0, pos1, "group:pollinating_grass") > 3 then
+	if #minetest.find_nodes_in_area(pos0, pos1, "group:mature_grass") > 3 then
 		return
 	end
 
@@ -45,9 +45,9 @@ function nature.pollinate(pos, node)
 			if light and light >= light_minimum and
 					-- Only spread to same surface node
 					soil_name == under.name and
-					-- Desert sand is in the soil group, so ignore it
+					-- Desert sand is in the soil group, just ignore it
 					soil_name ~= "default:desert_sand" then
-				minetest.set_node(soil_above, {name = node.name})
+				minetest.set_node(soil_above, {name = node.name..'0'})
 			end
 		end
 	end
@@ -55,7 +55,7 @@ end
 
 minetest.register_abm({
 	label = "Pollinate Grasses",
-	nodenames = {"group:pollinating_grass"},
+	nodenames = {"group:mature_grass"},
 	interval = pollinating_interval,
 	chance = pollinating_chance,
 	action = function(...)
