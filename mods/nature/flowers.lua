@@ -101,18 +101,18 @@ minetest.register_node("nature:black_tulip_4", {
 		max_items = 2,
 		items = {
 			{items = {"nature:black_tulip_0"}},
-			{items = {"nature:black_tulip"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
+			{items = {"nature:black_tulip_picked"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
 		}
 	}
 })
 
-minetest.register_node("nature:black_tulip", {
-	description = "Black Tulip",
+minetest.register_node("nature:black_tulip_picked", {
+	description = "Picked Black Tulip",
 	drawtype = "plantlike",
 	waving = 1,
-	tiles = {"black_tulip_4.png"},
-	inventory_image = "black_tulip_4.png",
-	wield_image = "black_tulip_4.png",
+	tiles = {"black_tulip_picked.png"},
+	inventory_image = "black_tulip_picked.png",
+	wield_image = "black_tulip_picked.png",
 	sunlight_propagates = true,
 	paramtype = "light",
 	walkable = false,
@@ -123,9 +123,4 @@ minetest.register_node("nature:black_tulip", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-	drop = {
-		items = {
-			{items = {"nature:black_tulip"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
-		}
-	}
 })
