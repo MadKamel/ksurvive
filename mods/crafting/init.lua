@@ -3,11 +3,11 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
-	output = "nature:wood_spool",
+	output = "nature:juncus_patch",
 	recipe = {
-		{"default:stick", "", "default:stick"},
-		{"default:stick", "default:stick", "default:stick"},
-		{"default:stick", "", "default:stick"},
+		{"nature:juncus_stalk", "nature:juncus_stalk", "nature:juncus_stalk"},
+		{"nature:juncus_stalk", "nature:juncus_stalk", "nature:juncus_stalk"},
+		{"nature:juncus_stalk", "nature:juncus_stalk", "nature:juncus_stalk"},
 	}
 })
 

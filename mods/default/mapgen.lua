@@ -25,11 +25,11 @@ minetest.register_alias("mapgen_ice", "default:ice")
 minetest.register_alias("mapgen_tree", "default:tree")
 minetest.register_alias("mapgen_leaves", "default:leaves")
 minetest.register_alias("mapgen_apple", "default:apple")
-minetest.register_alias("mapgen_jungletree", "default:jungletree")
-minetest.register_alias("mapgen_jungleleaves", "default:jungleleaves")
-minetest.register_alias("mapgen_junglegrass", "default:junglegrass")
-minetest.register_alias("mapgen_pine_tree", "default:pine_tree")
-minetest.register_alias("mapgen_pine_needles", "default:pine_needles")
+minetest.register_alias("mapgen_jungletree", "default:tree")
+minetest.register_alias("mapgen_jungleleaves", "default:leaves")
+minetest.register_alias("mapgen_junglegrass", "nature:bahia_4")
+minetest.register_alias("mapgen_pine_tree", "default:tree")
+minetest.register_alias("mapgen_pine_needles", "default:leaves")
 
 minetest.register_alias("mapgen_cobble", "default:cobble")
 minetest.register_alias("mapgen_stair_cobble", "stairs:stair_cobble")
@@ -828,8 +828,8 @@ function default.register_biomes()
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
-		y_min = 52,
-		heat_point = 50,
+		y_min = 68,
+		heat_point = 55,
 		humidity_point = 35,
 	})
 
@@ -976,10 +976,10 @@ end
 
 function default.register_mgv6_decorations()
 
-	-- KSurvive nature mod flowers
+	-- KSurvive nature mod plants
 
 	minetest.register_decoration({
-		name = "nature:black_tulip_4",
+		name = "default:black_tulip",
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
@@ -991,9 +991,45 @@ function default.register_mgv6_decorations()
 			octaves = 3,
 			persist = 0.6
 		},
-		y_max = 58,
+		y_max = 28,
 		y_min = 1,
 		decoration = "nature:black_tulip_4",
+	})
+
+	minetest.register_decoration({
+		name = "default:bahiagrass",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 52,
+		y_min = 1,
+		decoration = "nature:bahia_4",
+	})
+
+	minetest.register_decoration({
+		name = "default:juncus",
+		deco_type = "simple",
+		place_on = {"default:silver_sand", "default:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 2,
+		y_min = 1,
+		decoration = "nature:juncus_4",
 	})
 
 	-- Papyrus
@@ -1042,28 +1078,6 @@ function default.register_mgv6_decorations()
 	        height_max = 4,
 	})
 
-	-- Long grasses
-
-	for length = 1, 5 do
-		minetest.register_decoration({
-			name = "default:grass_"..length,
-			deco_type = "simple",
-			place_on = {"default:dirt_with_grass"},
-			sidelen = 16,
-			noise_params = {
-				offset = 0,
-				scale = 0.007,
-				spread = {x = 100, y = 100, z = 100},
-				seed = 329,
-				octaves = 3,
-				persist = 0.6
-			},
-			y_max = 30,
-			y_min = 1,
-			decoration = "default:grass_"..length,
-		})
-	end
-
 	-- Dry shrubs
 
 	minetest.register_decoration({
@@ -1079,7 +1093,7 @@ function default.register_mgv6_decorations()
 			octaves = 3,
 			persist = 0.6
 		},
-		y_max = 30,
+		y_max = 60,
 		y_min = 1,
 		decoration = "default:dry_shrub",
 		param2 = 4,
@@ -1089,94 +1103,43 @@ end
 
 -- All mapgens except mgv6
 
-local function register_grass_decoration(offset, scale, length)
-	minetest.register_decoration({
-		name = "default:grass_" .. length,
-		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
-		},
-		biomes = {"grassland", "deciduous_forest"},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "default:grass_" .. length,
-	})
-end
-
-local function register_dry_grass_decoration(offset, scale, length)
-	minetest.register_decoration({
-		name = "default:dry_grass_" .. length,
-		deco_type = "simple",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
-		},
-		biomes = {"savanna"},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "default:dry_grass_" .. length,
-	})
-end
-
-local function register_fern_decoration(seed, length)
-	minetest.register_decoration({
-		name = "default:fern_" .. length,
-		deco_type = "simple",
-		place_on = {"default:dirt_with_coniferous_litter"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.2,
-			spread = {x = 100, y = 100, z = 100},
-			seed = seed,
-			octaves = 3,
-			persist = 0.7
-		},
-		biomes = {"coniferous_forest"},
-		y_max = 31000,
-		y_min = 6,
-		decoration = "default:fern_" .. length,
-	})
-end
 
 
 function default.register_decorations()
-	-- Savanna bare dirt patches.
-	-- Must come before all savanna decorations that are placed on dry grass.
-	-- Noise is similar to long dry grass noise, but scale inverted, to appear
-	-- where long dry grass is least dense and shortest.
+	
+	-- KSurvive nature mod nodes first
 
 	minetest.register_decoration({
+		name = "default:black_tulip",
 		deco_type = "simple",
-		place_on = {"default:dry_dirt_with_dry_grass"},
-		sidelen = 4,
-		noise_params = {
-			offset = -1.5,
-			scale = -1.5,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 4,
-			persist = 1.0
-		},
-		biomes = {"savanna"},
-		y_max = 31000,
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.1,
+		y_max = 48,
 		y_min = 1,
-		decoration = "default:dry_dirt",
-		place_offset_y = -1,
-		flags = "force_placement",
+		decoration = "nature:black_tulip_4",
+	})
+
+	minetest.register_decoration({
+		name = "default:bahiagrass",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.6,
+		y_max = 60,
+		y_min = 1,
+		decoration = "nature:bahia_4",
+	})
+
+	minetest.register_decoration({
+		name = "default:juncus",
+		deco_type = "simple",
+		place_on = {"default:silver_sand", "default:sand"},
+		sidelen = 80,
+		fill_ratio = 0.3,
+		y_max = 2,
+		y_min = 1,
+		decoration = "nature:juncus_4",
 	})
 
 	-- Apple tree and log
@@ -1225,35 +1188,6 @@ function default.register_decorations()
 		spawn_by = "default:dirt_with_grass",
 		num_spawn_by = 8,
 	})
-
-	-- Emergent jungle tree
-	-- Due to 32 node height, altitude is limited and prescence depends on chunksize
-
-	local chunksize = tonumber(minetest.get_mapgen_setting("chunksize"))
-	if chunksize >= 5 then
-		minetest.register_decoration({
-			name = "default:emergent_jungle_tree",
-			deco_type = "schematic",
-			place_on = {"default:dirt_with_rainforest_litter"},
-			sidelen = 80,
-			noise_params = {
-				offset = 0.0,
-				scale = 0.0025,
-				spread = {x = 250, y = 250, z = 250},
-				seed = 2685,
-				octaves = 3,
-				persist = 0.7
-			},
-			biomes = {"rainforest"},
-			y_max = 32,
-			y_min = 1,
-			schematic = minetest.get_modpath("default") ..
-					"/schematics/emergent_jungle_tree.mts",
-			flags = "place_center_x, place_center_z",
-			rotation = "random",
-			place_offset_y = -4,
-		})
-	end
 
 	-- Large cactus
 
@@ -1324,28 +1258,6 @@ function default.register_decorations()
 		schematic = minetest.get_modpath("default") .. "/schematics/papyrus_on_dirt.mts",
 	})
 
-	-- Dry dirt version for savanna shore
-
-	minetest.register_decoration({
-		name = "default:papyrus_on_dry_dirt",
-		deco_type = "schematic",
-		place_on = {"default:dry_dirt"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.3,
-			scale = 0.7,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 354,
-			octaves = 3,
-			persist = 0.7
-		},
-		biomes = {"savanna_shore"},
-		y_max = 0,
-		y_min = 0,
-		schematic = minetest.get_modpath("default") ..
-			"/schematics/papyrus_on_dry_dirt.mts",
-	})
-
 	-- Bush
 
 	minetest.register_decoration({
@@ -1389,42 +1301,6 @@ function default.register_decorations()
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
 		flags = "place_center_x, place_center_z",
-	})
-
-	-- Grasses
-
-	register_grass_decoration(-0.03,  0.09,  5)
-	register_grass_decoration(-0.015, 0.075, 4)
-	register_grass_decoration(0,      0.06,  3)
-	register_grass_decoration(0.015,  0.045, 2)
-	register_grass_decoration(0.03,   0.03,  1)
-
-	-- Dry grasses
-
-	register_dry_grass_decoration(0.01, 0.05,  5)
-	register_dry_grass_decoration(0.03, 0.03,  4)
-	register_dry_grass_decoration(0.05, 0.01,  3)
-	register_dry_grass_decoration(0.07, -0.01, 2)
-	register_dry_grass_decoration(0.09, -0.03, 1)
-
-	-- Ferns
-
-	register_fern_decoration(14936, 3)
-	register_fern_decoration(801,   2)
-	register_fern_decoration(5,     1)
-
-	-- Junglegrass
-
-	minetest.register_decoration({
-		name = "default:junglegrass",
-		deco_type = "simple",
-		place_on = {"default:dirt_with_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.1,
-		biomes = {"rainforest"},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "default:junglegrass",
 	})
 
 	-- Dry shrub

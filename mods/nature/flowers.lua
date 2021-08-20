@@ -16,7 +16,8 @@ minetest.register_node("nature:black_tulip_0", {
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:black_tulip_1", {
@@ -35,7 +36,8 @@ minetest.register_node("nature:black_tulip_1", {
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:black_tulip_2", {
@@ -54,7 +56,8 @@ minetest.register_node("nature:black_tulip_2", {
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:black_tulip_3", {
@@ -73,7 +76,8 @@ minetest.register_node("nature:black_tulip_3", {
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:black_tulip_4", {
@@ -97,7 +101,7 @@ minetest.register_node("nature:black_tulip_4", {
 		max_items = 2,
 		items = {
 			{items = {"nature:black_tulip_0"}},
-			{items = {"nature:black_tulip"}}
+			{items = {"nature:black_tulip"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
 		}
 	}
 })
@@ -118,5 +122,10 @@ minetest.register_node("nature:black_tulip", {
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {
+		items = {
+			{items = {"nature:black_tulip"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
+		}
 	}
 })

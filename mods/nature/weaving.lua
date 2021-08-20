@@ -1,11 +1,9 @@
-minetest.register_craftitem("nature:juncus_fiber", {
-	description = "Juncus Fibers",
-	inventory_image = "juncus_fiber.png",
-	groups = {thread = 1},
+minetest.register_craftitem("nature:juncus_stalk", {
+	description = "Juncus Stalk",
+	inventory_image = "juncus_thread.png",
 })
 
-minetest.register_craftitem("nature:wood_spool", {
-	description = "Wooden Spool",
-	inventory_image = "wood_spool.png",
-	groups = {spool = 1},
+minetest.register_craftitem("nature:juncus_patch", {
+	description = "Patch of Woven Juncus Stalk",
+	inventory_image = "juncus_patch.png",
 })

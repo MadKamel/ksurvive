@@ -1,3 +1,5 @@
+local g_groups = {attached_node = 1, snappy = 3}
+
 minetest.register_node("nature:bahia_0", {
 	description = "Bahiagrass Seeds",
 	drawtype = "plantlike",
@@ -9,12 +11,13 @@ minetest.register_node("nature:bahia_0", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:bahia_1", {
@@ -28,12 +31,13 @@ minetest.register_node("nature:bahia_1", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:bahia_2", {
@@ -47,12 +51,13 @@ minetest.register_node("nature:bahia_2", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:bahia_3", {
@@ -66,12 +71,13 @@ minetest.register_node("nature:bahia_3", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:bahia_4", {
@@ -85,38 +91,20 @@ minetest.register_node("nature:bahia_4", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
 	},
-    drop = {
-		max_items = 2,
+	drop = {
+		max_items = 3,
 		items = {
-			{items = {"nature:bahia_0 4"}},
-			{items = {"nature:bahia"}}
+			{items = {"nature:bahia_0 5"}},
+			{items = {"nature:bahia_0 1"}, rarity = 2},
+			{items = {"nature:bahia_0 1"}, rarity = 4},
 		}
-	}
-})
-
-minetest.register_node("nature:bahia", {
-	description = "Bahiagrass",
-	drawtype = "plantlike",
-	waving = 1,
-	tiles = {"bahia_4.png"},
-	inventory_image = "bahia_4.png",
-	wield_image = "bahia_4.png",
-	sunlight_propagates = true,
-	paramtype = "light",
-	walkable = false,
-	buildable_to = true,
-	groups = f_groups,
-	sounds = default.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
 })
 
 
@@ -132,12 +120,13 @@ minetest.register_node("nature:juncus_0", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:juncus_1", {
@@ -151,12 +140,13 @@ minetest.register_node("nature:juncus_1", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:juncus_2", {
@@ -170,12 +160,13 @@ minetest.register_node("nature:juncus_2", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:juncus_3", {
@@ -189,12 +180,13 @@ minetest.register_node("nature:juncus_3", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
+	drop = {}
 })
 
 minetest.register_node("nature:juncus_4", {
@@ -208,36 +200,18 @@ minetest.register_node("nature:juncus_4", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = f_groups,
+	groups = g_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
-    drop = {
-		max_items = 2,
+	drop = {
+		max_items = 3,
 		items = {
 			{items = {"nature:juncus_0 2"}},
-			{items = {"nature:juncus"}}
+			{items = {"nature:juncus_0"}, rarity = 2},
+			{items = {"nature:juncus_stalk"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
 		}
-	}
-})
-
-minetest.register_node("nature:juncus", {
-	description = "Juncus Rushes",
-	drawtype = "plantlike",
-	waving = 1,
-	tiles = {"juncus_4.png"},
-	inventory_image = "juncus_4.png",
-	wield_image = "juncus_4.png",
-	sunlight_propagates = true,
-	paramtype = "light",
-	walkable = false,
-	buildable_to = true,
-	groups = f_groups,
-	sounds = default.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-	}
+	},
 })
