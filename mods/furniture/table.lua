@@ -19,7 +19,7 @@ minetest.register_node("furniture:table", {
 			{-0.3,-0.2,0.3, 0.3,-0.1,0.4},
 		},
 	},
-	groups = {falling_node = 1, dig_immediate = 3}
+	groups = {falling_node = 1, choppy = 3}
 })
 
 minetest.register_node("furniture:iron_table", {
@@ -43,7 +43,7 @@ minetest.register_node("furniture:iron_table", {
 			{-0.3,-0.2,0.3, 0.3,-0.1,0.4},
 		},
 	},
-	groups = {falling_node = 1, dig_immediate = 3}
+	groups = {falling_node = 1, cracky = 3}
 })
 
 minetest.register_node("furniture:copper_table", {
@@ -67,7 +67,7 @@ minetest.register_node("furniture:copper_table", {
 			{-0.3,-0.2,0.3, 0.3,-0.1,0.4},
 		},
 	},
-	groups = {falling_node = 1, dig_immediate = 3}
+	groups = {falling_node = 1, cracky = 3}
 })
 
 minetest.register_node("furniture:tin_table", {
@@ -91,5 +91,5 @@ minetest.register_node("furniture:tin_table", {
 			{-0.3,-0.2,0.3, 0.3,-0.1,0.4},
 		},
 	},
-	groups = {falling_node = 1, dig_immediate = 3}
+	groups = {falling_node = 1, cracky = 3}
 })

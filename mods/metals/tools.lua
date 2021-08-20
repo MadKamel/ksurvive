@@ -177,7 +177,7 @@ minetest.register_tool("metals:axe_iron", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
+			choppy={times={[1]=1.50, [2]=0.40, [3]=0.10}, uses=20, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -192,7 +192,7 @@ minetest.register_tool("metals:axe_copper", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=50, maxlevel=2},
+			choppy={times={[1]=1.50, [2]=0.40, [3]=0.10}, uses=50, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},
@@ -207,7 +207,7 @@ minetest.register_tool("metals:axe_tin", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=80, maxlevel=2},
+			choppy={times={[1]=1.50, [2]=0.40, [3]=0.10}, uses=80, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},

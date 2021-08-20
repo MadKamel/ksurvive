@@ -134,7 +134,7 @@ minetest.register_tool("rocks:axe_stone", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.00, [2]=2.00, [3]=1.30}, uses=10, maxlevel=1},
+			choppy={times={[1]=2.00, [2]=1.00, [3]=0.25}, uses=10, maxlevel=1},
 		},
 		damage_groups = {fleshy=2},
 	},
@@ -149,7 +149,7 @@ minetest.register_tool("rocks:axe_desert_stone", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.00, [2]=2.00, [3]=1.30}, uses=10, maxlevel=1},
+			choppy={times={[1]=2.00, [2]=1.00, [3]=0.25}, uses=10, maxlevel=1},
 		},
 		damage_groups = {fleshy=2},
 	},
@@ -164,7 +164,7 @@ minetest.register_tool("rocks:axe_basalt", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.00, [2]=2.00, [3]=1.30}, uses=10, maxlevel=1},
+			choppy={times={[1]=2.00, [2]=1.00, [3]=0.25}, uses=10, maxlevel=1},
 		},
 		damage_groups = {fleshy=2},
 	},
@@ -179,7 +179,7 @@ minetest.register_tool("rocks:axe_granite", {
 		full_punch_interval = 1.0,
 		max_drop_level=1,
 		groupcaps={
-			choppy={times={[1]=3.00, [2]=2.00, [3]=1.30}, uses=10, maxlevel=1},
+			choppy={times={[1]=2.00, [2]=1.00, [3]=0.25}, uses=10, maxlevel=1},
 		},
 		damage_groups = {fleshy=2},
 	},
