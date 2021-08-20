@@ -127,3 +127,8 @@ minetest.register_node("nature:black_tulip_picked", {
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
 })
+
+minetest.register_craftitem("nature:black_tulip_flower", {
+	description = "Black Tulip Flower",
+	inventory_image = "black_tulip_flower.png",
+})
