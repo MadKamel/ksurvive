@@ -55,6 +55,18 @@ minetest.register_abm({
     end
 })
 
+minetest.register_abm({
+    nodenames = {"nature:black_tulip_picked"},
+    neighbors = {"group:soil"},
+    interval = growthrate / 1.75,
+    chance = growchance / 1.75,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:black_tulip_4"})
+    end
+})
+
 
 
 -- This is for the bahiagrass's growth cycle.
