@@ -1,4 +1,5 @@
 local g_groups = {attached_node = 1, snappy = 3}
+local gm_groups = {attached_node = 1, snappy = 3, mature_grass = 1}
 
 minetest.register_node("nature:bahia_0", {
 	description = "Bahiagrass Seeds",
@@ -91,7 +92,7 @@ minetest.register_node("nature:bahia_4", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = g_groups,
+	groups = gm_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -200,7 +201,7 @@ minetest.register_node("nature:juncus_4", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = g_groups,
+	groups = gm_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -309,7 +310,7 @@ minetest.register_node("nature:bouteloua_3", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = g_groups,
+	groups = gm_groups,
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
