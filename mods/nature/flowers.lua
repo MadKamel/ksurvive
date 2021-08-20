@@ -97,11 +97,14 @@ minetest.register_node("nature:black_tulip_4", {
 		type = "fixed",
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "nature:black_tulip_picked"})
+	end,
 	drop = {
 		max_items = 2,
 		items = {
 			{items = {"nature:black_tulip_0"}},
-			{items = {"nature:black_tulip_picked"}, tools = {'metals:scythe_tin', 'metals:scythe_copper', 'metals:scythe_iron'}}
+			{items = {"nature:black_tulip_flower"}}
 		}
 	}
 })
