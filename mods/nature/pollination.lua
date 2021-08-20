@@ -44,9 +44,7 @@ function nature.pollinate(pos, node)
 			light = minetest.get_node_light(soil_above)
 			if light and light >= light_minimum and
 					-- Only spread to same surface node
-					soil_name == under.name and
-					-- Desert sand is in the soil group, just ignore it
-					soil_name ~= "default:desert_sand" then
+					soil_name == under.name
 				minetest.set_node(soil_above, {name = node.name..'0'})
 			end
 		end
