@@ -101,14 +101,3 @@ minetest.register_abm({
 		minetest.set_node(pos, {name = "foodstuff:silver_sand_with_salt_3"})
 	end
 })
-
-minetest.register_abm({
-	neighbors = {"group:water"},
-	nodenames = {"foodstuff:silver_sand_with_salt_3"},
-	interval = 10,
-	chance = 15,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "foodstuff:silver_sand_with_salt_4"})
-	end
-})
