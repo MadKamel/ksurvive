@@ -136,6 +136,7 @@ minetest.register_craftitem("nature:black_tulip_flower", {
 })
 
 
+
 -- Chuparosa flowers
 
 minetest.register_node("nature:chuparosa_0", {
@@ -242,7 +243,7 @@ minetest.register_node("nature:chuparosa_4", {
 		max_items = 2,
 		items = {
 			{items = {"nature:chuparosa_0 4"}},
-			{items = {"nature:chuparosa_flower"}}
+			{items = {"nature:chuparosa_flower 4"}}
 		}
 	}
 })
@@ -269,4 +270,141 @@ minetest.register_node("nature:chuparosa_picked", {
 minetest.register_craftitem("nature:chuparosa_flower", {
 	description = "Chuparosa Flower",
 	inventory_image = "chuparosa_flower.png",
+})
+
+
+
+-- Rudbeckia Hirta flowers
+
+minetest.register_node("nature:rudbeckia_hirta_0", {
+	description = "Rudbeckia Hirta Seeds",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_0.png"},
+	inventory_image = "rudbeckia_hirta_seeds.png",
+	wield_image = "rudbeckia_hirta_seeds.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("nature:rudbeckia_hirta_1", {
+	description = "Rudbeckia Hirta Sprout",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_1.png"},
+	inventory_image = "rudbeckia_hirta_1.png",
+	wield_image = "rudbeckia_hirta_1.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("nature:rudbeckia_hirta_2", {
+	description = "Young Rudbeckia Hirta",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_2.png"},
+	inventory_image = "rudbeckia_hirta_2.png",
+	wield_image = "rudbeckia_hirta_2.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("nature:rudbeckia_hirta_3", {
+	description = "Young Rudbeckia Hirta",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_3.png"},
+	inventory_image = "rudbeckia_hirta_3.png",
+	wield_image = "rudbeckia_hirta_3.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	drop = {}
+})
+
+minetest.register_node("nature:rudbeckia_hirta_4", {
+	description = "Mature Rudbeckia Hirta",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_4.png"},
+	inventory_image = "rudbeckia_hirta_4.png",
+	wield_image = "rudbeckia_hirta_4.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "nature:chuparosa_picked"})
+	end,
+	drop = {
+		max_items = 2,
+		items = {
+			{items = {"nature:chuparosa_0 4"}},
+			{items = {"nature:chuparosa_flower 4"}}
+		}
+	}
+})
+
+minetest.register_node("nature:rudbeckia_hirta_picked", {
+	description = "Picked Rudbeckia",
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"rudbeckia_hirta_picked.png"},
+	inventory_image = "rudbeckia_hirta_picked.png",
+	wield_image = "rudbeckia_hirta_picked.png",
+	sunlight_propagates = true,
+	paramtype = "light",
+	walkable = false,
+	buildable_to = true,
+	groups = f_groups,
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
+	},
+})
+
+minetest.register_craftitem("nature:rudbeckia_hirta_flower", {
+	description = "Rudbeckia Hirta Flower",
+	inventory_image = "rudbeckia_hirta_flower.png",
 })
