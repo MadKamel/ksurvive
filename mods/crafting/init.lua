@@ -325,6 +325,33 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "metals:tongs_tin",
+	recipe = {
+		{"metals:tin_stick", "", "metals:tin_stick"},
+		{"", "metals:tin_stick", ""},
+		{"metals:tin_stick", "", "metals:tin_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_copper",
+	recipe = {
+		{"metals:copper_stick", "", "metals:copper_stick"},
+		{"", "metals:copper_stick", ""},
+		{"metals:copper_stick", "", "metals:copper_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_iron",
+	recipe = {
+		{"metals:iron_stick", "", "metals:iron_stick"},
+		{"", "metals:iron_stick", ""},
+		{"metals:iron_stick", "", "metals:iron_stick"},
+	}
+})
+
+minetest.register_craft({
 	output = "metals:scythe_tin",
 	recipe = {
 		{"metals:tin_stick", "metals:tin_stick"},
