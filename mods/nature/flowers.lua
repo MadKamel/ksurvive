@@ -241,7 +241,7 @@ minetest.register_node("nature:chuparosa_4", {
 	drop = {
 		max_items = 2,
 		items = {
-			{items = {"nature:chuparosa_0"}},
+			{items = {"nature:chuparosa_0 4"}},
 			{items = {"nature:chuparosa_flower"}}
 		}
 	}
