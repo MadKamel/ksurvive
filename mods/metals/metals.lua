@@ -7,7 +7,7 @@ minetest.register_node("metals:iron_block", {
 minetest.register_node("metals:glowing_iron_block", {
 	description = "Block of Hot Iron",
 	tiles = {"glowing_iron.png"},
-	groups = {cracky = 2},
+	groups = {glowing_metal = 3},
 })
 
 minetest.register_node("metals:copper_block", {
@@ -25,11 +25,11 @@ minetest.register_node("metals:glowing_copper_block", {
 minetest.register_node("metals:tin_block", {
 	description = "Block of Refined Tin",
 	tiles = {"tin_block.png"},
-	groups = {cracky = 2},
+	groups = {glowing_metal = 3},
 })
 
 minetest.register_node("metals:glowing_tin_block", {
 	description = "Block of Hot Tin",
 	tiles = {"glowing_tin.png"},
-	groups = {cracky = 2},
+	groups = {glowing_metal = 3},
 })
