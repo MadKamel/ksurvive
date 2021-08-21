@@ -69,6 +69,71 @@ minetest.register_abm({
 
 
 
+
+-- This is for chuparosa's growing cycle.
+
+minetest.register_abm({
+    nodenames = {"nature:chuparosa_0"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:chuparosa_1"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:chuparosa_1"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:chuparosa_2"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:chuparosa_2"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:chuparosa_3"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:chuparosa_3"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:chuparosa_4"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:chuparosa_picked"},
+    neighbors = {"group:soil"},
+    interval = growthrate / 1.75,
+    chance = growchance / 1.75,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:chuparosa_4"})
+    end
+})
+
+
+
 -- This is for the bahiagrass's growth cycle.
 
 minetest.register_abm({
@@ -118,7 +183,6 @@ minetest.register_abm({
         minetest.set_node(pos, {name = "nature:bahia"})
     end
 })
-
 
 
 
