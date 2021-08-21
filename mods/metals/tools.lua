@@ -1,5 +1,51 @@
--- Pickaxes
+-- Tongs
 
+minetest.register_tool("metals:tongs_iron", {
+	description = "Wrought Iron Tongs",
+	inventory_image = "iron_tongs.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			glowing_metal = {times={[3]=0.00}, uses=10, maxlevel=2},
+		},
+		damage_groups = {fleshy=1},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:tongs_copper", {
+	description = "Wrought Copper Tongs",
+	inventory_image = "copper_tongs.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			glowing_metal = {times={[3]=0.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=1},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("metals:tongs_tin", {
+	description = "Wrought Tin Tongs",
+	inventory_image = "tin_tongs.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			glowing_metal = {times={[3]=0.00}, uses=40, maxlevel=2},
+		},
+		damage_groups = {fleshy=1},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+-- Pickaxes
 
 minetest.register_tool("metals:pick_iron", {
 	description = "Wrought Iron Pickaxe",
