@@ -995,6 +995,24 @@ function default.register_mgv6_decorations()
 		y_min = 1,
 		decoration = "nature:black_tulip_4",
 	})
+	
+	minetest.register_decoration({
+		name = "default:chuparosa",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 28,
+		y_min = 1,
+		decoration = "nature:chuparosa_4",
+	})
 
 	minetest.register_decoration({
 		name = "default:bouteloua",
@@ -1138,6 +1156,24 @@ function default.register_decorations()
 		decoration = "nature:black_tulip_4",
 	})
 
+	minetest.register_decoration({
+		name = "default:chuparosa",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 28,
+		y_min = 1,
+		decoration = "nature:chuparosa_4",
+	})
+	
 	minetest.register_decoration({
 		name = "default:bahiagrass",
 		deco_type = "simple",
