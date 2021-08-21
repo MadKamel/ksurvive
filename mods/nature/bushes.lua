@@ -34,7 +34,6 @@ minetest.register_node("nature:juniper_leaves", {
 			{items = {"nature:juniper_leaves"}}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
 
 	on_timer = function(pos, elapsed)
 		if minetest.get_node_light(pos) < 11 then
@@ -45,6 +44,23 @@ minetest.register_node("nature:juniper_leaves", {
 	end,
 
 	after_place_node = after_place_leaves,
+})
+
+minetest.register_node("nature:juniper_stem", {
+	description = "Juniper Bush Stem",
+	drawtype = "plantlike",
+	visual_scale = 1.41,
+	tiles = {"juniper_stem.png"},
+	inventory_image = "juniper_stem.png",
+	wield_image = "juniper_stem.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {choppy = 2, flammable = 2, falling_node = 1},
+	sounds = default.node_sound_wood_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
+	},
 })
 
 minetest.register_node("nature:juniper_sapling", {
@@ -63,7 +79,6 @@ minetest.register_node("nature:juniper_sapling", {
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
@@ -81,3 +96,16 @@ minetest.register_node("nature:juniper_sapling", {
 		return itemstack
 	end,
 })
+
+local function grow_juniper_sapling(pos)
+	minetest.log("action", "A juniper bush sapling grows into a juniper bush at "..
+	minetest.pos_to_string(pos))
+	grow_juniper_bush(pos)
+end
+
+function default.grow_bush(pos)
+	local path = minetest.get_modpath("nature") ..
+		"/schematics/juniper_bush.mts"
+	minetest.place_schematic({x = pos.x - 1, y = pos.y - 1, z = pos.z - 1},
+		path, "0", nil, false)
+end
