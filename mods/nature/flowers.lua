@@ -374,13 +374,13 @@ minetest.register_node("nature:rudbeckia_hirta_4", {
 		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 	},
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "nature:chuparosa_picked"})
+		minetest.set_node(pos, {name = "nature:rudbeckia_hirta_picked"})
 	end,
 	drop = {
 		max_items = 2,
 		items = {
-			{items = {"nature:chuparosa_0 4"}},
-			{items = {"nature:chuparosa_flower 4"}}
+			{items = {"nature:rudbeckia_hirta_0 4"}},
+			{items = {"nature:rudbeckia_hirta_flower 4"}}
 		}
 	}
 })
