@@ -12,7 +12,7 @@ minetest.register_node("metals:glowing_iron_block", {
 
 minetest.register_node("metals:rusted_iron_block", {
 	description = "Block of Refined Iron with Oxidization",
-	tiles = {"iron_block.png^iron_rust.png"},
+	tiles = {"iron_block.png^iron_rust_overlay.png"},
 	groups = {cracky = 2, iron_block = 1},
 })
 
@@ -30,7 +30,7 @@ minetest.register_node("metals:glowing_copper_block", {
 
 minetest.register_node("metals:rusted_copper_block", {
 	description = "Block of Refined Copper with OXidization",
-	tiles = {"copper_block.png^copper_rust.png"},
+	tiles = {"copper_block.png^copper_rust_overlay.png"},
 	groups = {cracky = 2, copper_block = 1},
 })
 

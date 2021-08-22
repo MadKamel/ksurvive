@@ -45,7 +45,7 @@ minetest.register_tool("metals:tongs_tin", {
 	groups = {}
 })
 
-inetest.register_tool("metals:tongs_gold", {
+minetest.register_tool("metals:tongs_gold", {
 	description = "Wrought Gold Tongs",
 	inventory_image = "gold_tongs.png",
 	tool_capabilities = {
@@ -60,7 +60,7 @@ inetest.register_tool("metals:tongs_gold", {
 	groups = {}
 })
 
-inetest.register_tool("metals:tongs_bronze", {
+minetest.register_tool("metals:tongs_bronze", {
 	description = "Wrought Bronze Tongs",
 	inventory_image = "bronze_tongs.png",
 	tool_capabilities = {
