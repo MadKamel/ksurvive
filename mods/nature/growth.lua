@@ -69,6 +69,68 @@ minetest.register_abm({
 
 
 
+-- Rudbeckia growth cycle
+
+minetest.register_abm({
+    nodenames = {"nature:rudbeckia_hirta_0"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:rudbeckia_hirta_1"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:rudbeckia_hirta_1"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:rudbeckia_hirta_2"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:rudbeckia_hirta_2"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:rudbeckia_hirta_3"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:rudbeckia_hirta_3"},
+    neighbors = {"group:soil"},
+    interval = growthrate,
+    chance = growchance,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:rudbeckia_hirta_4"})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"nature:rudbeckia_hirta_picked"},
+    neighbors = {"group:soil"},
+    interval = growthrate / 1.75,
+    chance = growchance / 1.75,
+    action = function(pos, node, active_object_count,
+            active_object_count_wider)
+        local pos = {x = pos.x, y = pos.y, z = pos.z}
+        minetest.set_node(pos, {name = "nature:rudbeckia_hirta_4"})
+    end
+})
+
 
 -- This is for chuparosa's growing cycle.
 
