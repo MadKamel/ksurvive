@@ -94,12 +94,102 @@ minetest.register_tool("adze:obsidian_adze", {
 		full_punch_interval = 1.2,
 		max_drop_level=0,
 		groupcaps={
-			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=45, maxlevel=1},
-			choppy = {times={[2]=1.50, [3]=0.80}, uses=45, maxlevel=1},
-			snappy = {times={[2]=0.80, [3]=0.20}, uses=45, maxlevel=1},
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=25, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=25, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=25, maxlevel=1},
 			cracky = {times={[3]=1.75}, uses=45, maxlevel=1},
 		},
-		damage_groups = {fleshy=4},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("adze:iron_adze", {
+	description = "Iron-Tipped Adze",
+	inventory_image = "iron_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=50, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=50, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=50, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("adze:copper_adze", {
+	description = "Copper-Tipped Adze",
+	inventory_image = "copper_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=50, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=50, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=50, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("adze:tin_adze", {
+	description = "Tin-Tipped Adze",
+	inventory_image = "tin_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=50, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=50, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=50, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("adze:gold_adze", {
+	description = "Gold-Tipped Adze",
+	inventory_image = "gold_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=50, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=50, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=50, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+minetest.register_tool("adze:bronze_adze", {
+	description = "Bronze-Tipped Adze",
+	inventory_image = "bronze_adze.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			crumbly = {times={[1]=2.75, [2]=1.30, [3]=0.50}, uses=50, maxlevel=1},
+			choppy = {times={[2]=1.50, [3]=0.80}, uses=50, maxlevel=1},
+			snappy = {times={[2]=0.80, [3]=0.20}, uses=50, maxlevel=1},
+			cracky = {times={[3]=1.75}, uses=50, maxlevel=1},
+		},
+		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {}
