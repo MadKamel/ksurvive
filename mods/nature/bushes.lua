@@ -5,7 +5,7 @@ minetest.register_craftitem("nature:gin_berries", {
 	on_use = minetest.item_eat(1),
 })
 
-minetest.register_node("juniper_leaves_with_berries", {
+minetest.register_node("nature:juniper_leaves_with_berries", {
 	description = "Juniper Bush with Gin Berries",
 	drawtype = "allfaces_optional",
 	tiles = {"default_leaves.png^gin_berries_overlay.png"},

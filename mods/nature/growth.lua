@@ -74,7 +74,7 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"nature:chuparosa_0"},
-    neighbors = {"group:soil"},
+    neighbors = {"group:sand"},
     interval = growthrate,
     chance = growchance,
     action = function(pos, node, active_object_count,
@@ -86,7 +86,7 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"nature:chuparosa_1"},
-    neighbors = {"group:soil"},
+    neighbors = {"group:sand"},
     interval = growthrate,
     chance = growchance,
     action = function(pos, node, active_object_count,
@@ -98,7 +98,7 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"nature:chuparosa_2"},
-    neighbors = {"group:soil"},
+    neighbors = {"group:sand"},
     interval = growthrate,
     chance = growchance,
     action = function(pos, node, active_object_count,
@@ -110,7 +110,7 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"nature:chuparosa_3"},
-    neighbors = {"group:soil"},
+    neighbors = {"group:sand"},
     interval = growthrate,
     chance = growchance,
     action = function(pos, node, active_object_count,
@@ -122,7 +122,7 @@ minetest.register_abm({
 
 minetest.register_abm({
     nodenames = {"nature:chuparosa_picked"},
-    neighbors = {"group:soil"},
+    neighbors = {"group:sand"},
     interval = growthrate / 1.75,
     chance = growchance / 1.75,
     action = function(pos, node, active_object_count,
