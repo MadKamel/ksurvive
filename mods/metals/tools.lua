@@ -45,6 +45,36 @@ minetest.register_tool("metals:tongs_tin", {
 	groups = {}
 })
 
+inetest.register_tool("metals:tongs_gold", {
+	description = "Wrought Gold Tongs",
+	inventory_image = "gold_tongs.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			glowing_metal = {times={[3]=0.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=1},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
+inetest.register_tool("metals:tongs_bronze", {
+	description = "Wrought Bronze Tongs",
+	inventory_image = "bronze_tongs.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			glowing_metal = {times={[3]=0.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=1},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {}
+})
+
 -- Pickaxes
 
 minetest.register_tool("metals:pick_iron", {
