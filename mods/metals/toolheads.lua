@@ -97,3 +97,13 @@ minetest.register_craftitem("metals:tin_stick", {
 	description = "Wrought Tin Stick",
 	inventory_image = "tin_stick.png"
 })
+
+minetest.register_craftitem("metals:gold_stick", {
+	description = "Wrought Gold Stick",
+	inventory_image = "gold_stick.png"
+})
+
+minetest.register_craftitem("metals:bronze_stick", {
+	description = "Wrought Bronze Stick",
+	inventory_image = "bronze_stick.png"
+})
