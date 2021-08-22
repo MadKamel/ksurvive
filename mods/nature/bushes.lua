@@ -2,7 +2,7 @@ minetest.register_craftitem("nature:gin_berries", {
 	description = "Gin Berries",
 	inventory_image = "gin_berries.png",
 	groups = {food_berry = 1},
-	on_use = minetest.item_eat(3),
+	on_use = minetest.item_eat(1),
 })
 
 minetest.register_node("juniper_leaves_with_berries", {
