@@ -110,7 +110,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"metals:iron_block"},
+	nodenames = {"group:iron_block"},
 	interval = abm_interval,
 	chance = melting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
@@ -249,7 +249,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"metals:copper_block"},
+	nodenames = {"group:copper_block"},
 	interval = abm_interval,
 	chance = melting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
@@ -378,23 +378,23 @@ minetest.register_node("metals:tin_molten_flowing", {
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"metals:tin_block"},
-	interval = abm_interval,
-	chance = melting_chance,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "metals:glowing_tin_block"})
-	end
-})
-
-minetest.register_abm({
-	neighbors = {"group:igniter"},
 	nodenames = {"metals:raw_tin_block"},
 	interval = abm_interval,
 	chance = melting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "metals:tin_molten_source"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"group:tin_block"},
+	interval = abm_interval,
+	chance = melting_chance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "metals:glowing_tin_block"})
 	end
 })
 
@@ -517,23 +517,23 @@ minetest.register_node("metals:gold_molten_flowing", {
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"metals:gold_block"},
-	interval = abm_interval,
-	chance = melting_chance,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local pos = {x = pos.x, y = pos.y, z = pos.z}
-		minetest.set_node(pos, {name = "metals:glowing_gold_block"})
-	end
-})
-
-minetest.register_abm({
-	neighbors = {"group:igniter"},
 	nodenames = {"metals:raw_gold_block"},
 	interval = abm_interval,
 	chance = melting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "metals:gold_molten_source"})
+	end
+})
+
+minetest.register_abm({
+	neighbors = {"group:igniter"},
+	nodenames = {"group:gold_block"},
+	interval = abm_interval,
+	chance = melting_chance,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "metals:glowing_gold_block"})
 	end
 })
 
@@ -564,7 +564,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	neighbors = {"group:igniter"},
-	nodenames = {"metals:bronze_block"},
+	nodenames = {"group:bronze_Block"},
 	interval = abm_interval,
 	chance = melting_chance,
 	action = function(pos, node, active_object_count, active_object_count_wider)
