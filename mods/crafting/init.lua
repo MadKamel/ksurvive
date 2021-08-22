@@ -918,6 +918,51 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "adze:iron_adze",
+	recipe = {
+		{"metals:iron_stick", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:copper_adze",
+	recipe = {
+		{"metals:copper_stick", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:tin_adze",
+	recipe = {
+		{"metals:tin_stick", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:gold_adze",
+	recipe = {
+		{"metals:gold_stick", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "adze:bronze_adze",
+	recipe = {
+		{"metals:bronze_stick", "default:stick"},
+		{"", "default:stick"},
+		{"", "default:stick"}
+	}
+})
+
 --minetest.register_craft({
 --	output = "foodstuff:stewed_mushroom_brown",
 --	recipe = {
