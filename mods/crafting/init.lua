@@ -325,6 +325,24 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "metals:tongs_gold",
+	recipe = {
+		{"metals:gold_stick", "", "metals:gold_stick"},
+		{"", "metals:gold_stick", ""},
+		{"metals:gold_stick", "", "metals:gold_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_bronze",
+	recipe = {
+		{"metals:bronze_stick", "", "metals:bronze_stick"},
+		{"", "metals:bronze_stick", ""},
+		{"metals:bronze_stick", "", "metals:bronze_stick"},
+	}
+})
+
+minetest.register_craft({
 	output = "metals:tongs_tin",
 	recipe = {
 		{"metals:tin_stick", "", "metals:tin_stick"},
@@ -402,6 +420,22 @@ minetest.register_craft({
 		{"metals:iron_stick", "metals:iron_stick"},
 		{"", "metals:iron_stick"},
 		{"", "metals:iron_stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:gold_stick 8",
+	recipe = {
+		{"metals:gold_block"},
+		{"metals:gold_block"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:bronze_stick 8",
+	recipe = {
+		{"metals:bronze_block"},
+		{"metals:bronze_block"}
 	}
 })
 
@@ -671,6 +705,15 @@ minetest.register_craft({
 	recipe = {
 		{"metals:sword_head_tin"},
 		{"default:stick"}
+	}
+})
+
+minetest.register_craft({
+	output = "metals:raw_gold_block",
+	recipe = {
+		{"default:gold_lump","default:gold_lump","default:gold_lump"},
+		{"default:gold_lump","default:gold_lump","default:gold_lump"},
+		{"default:gold_lump","default:gold_lump","default:gold_lump"}
 	}
 })
 
