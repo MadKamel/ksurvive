@@ -997,6 +997,24 @@ function default.register_mgv6_decorations()
 	})
 	
 	minetest.register_decoration({
+		name = "default:rudbeckia_hirta",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 28,
+		y_min = 1,
+		decoration = "nature:rudbeckia_hirta_4",
+	})
+	
+	minetest.register_decoration({
 		name = "default:chuparosa",
 		deco_type = "simple",
 		place_on = {"default:desert_sand"},
@@ -1155,21 +1173,25 @@ function default.register_decorations()
 		y_min = 1,
 		decoration = "nature:black_tulip_4",
 	})
+	
+	minetest.register_decoration({
+		name = "default:rudbeckia_hirta",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.01,
+		y_max = 60,
+		y_min = 1,
+		decoration = "nature:rudbeckia_hirta_4",
+	})
 
 	minetest.register_decoration({
 		name = "default:chuparosa",
 		deco_type = "simple",
 		place_on = {"default:desert_sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.007,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
-		},
-		y_max = 28,
+		sidelen = 80,
+		fill_ratio = 0.02,
+		y_max = 60,
 		y_min = 1,
 		decoration = "nature:chuparosa_4",
 	})
