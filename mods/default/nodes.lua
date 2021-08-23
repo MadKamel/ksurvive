@@ -563,8 +563,9 @@ minetest.register_node("default:apple", {
 		type = "fixed",
 		fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
-		leafdecay = 3, leafdecay_drop = 1, food_apple = 1, falling_node = 1},
+	groups = {snappy = 3, dig_immediate = 3, flammable = 2,
+		leafdecay = 3, leafdecay_drop = 1, food_apple = 1, falling_node = 1},	
+	drop = "foodstuff:apple",
 	on_use = minetest.item_eat(2),
 	sounds = default.node_sound_leaves_defaults(),
 
