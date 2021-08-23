@@ -2,11 +2,13 @@
 
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
+
+
 minetest.register_craft({
-	output = "metals:glowing_bronze 4",
+	type = "shapeless,
+	output = "metals:glowing_bronze_block 4",
 	recipe = {
-		{"metals:glowing_tin", "metals:glowing_tin"},
-		{"metals:glowing_tin", "metals:glowing_copper"}
+		{"metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_copper_block"}
 	}
 })
 
