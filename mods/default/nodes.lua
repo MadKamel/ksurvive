@@ -522,17 +522,26 @@ minetest.register_node("default:leaves", {
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 1,
+		max_items = 3,
 		items = {
 			{
-				-- player will get sapling with 1/20 chance
 				items = {"default:sapling"},
 				rarity = 20,
 			},
 			{
-				-- player will get leaves only if he get no saplings,
-				-- this is because max_items is 1
-				items = {"default:leaves"},
+				items = {"nature:leaf 4"},
+			},
+			{
+				items = {"nature:leaf"},
+				rarity = 2,
+			},
+			{
+				items = {"nature:leaf"},
+				rarity = 4,
+			},
+			{
+				items = {"default:stick"},
+				rarity = 2,
 			}
 		}
 	},
@@ -790,10 +799,27 @@ minetest.register_node("default:bush_leaves", {
 	paramtype = "light",
 	groups = {snappy = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 1,
+		max_items = 3,
 		items = {
-			{items = {"default:bush_sapling"}, rarity = 5},
-			{items = {"default:bush_leaves"}}
+			{
+				items = {"default:bush_sapling"},
+				rarity = 20,
+			},
+			{
+				items = {"nature:bush_leaf 4"},
+			},
+			{
+				items = {"nature:bush_leaf"},
+				rarity = 2,
+			},
+			{
+				items = {"nature:bush_leaf"},
+				rarity = 4,
+			},
+			{
+				items = {"default:stick"},
+				rarity = 2,
+			}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
@@ -859,10 +885,27 @@ minetest.register_node("default:blueberry_bush_leaves", {
 	paramtype = "light",
 	groups = {snappy = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 1,
+		max_items = 3,
 		items = {
-			{items = {"default:blueberry_bush_sapling"}, rarity = 5},
-			{items = {"default:blueberry_bush_leaves"}}
+			{
+				items = {"default:blueberry_bush_sapling"},
+				rarity = 20,
+			},
+			{
+				items = {"nature:blueberry_bush_leaf 4"},
+			},
+			{
+				items = {"nature:blueberry_bush_leaf"},
+				rarity = 2,
+			},
+			{
+				items = {"nature:blueberry_bush_leaf"},
+				rarity = 4,
+			},
+			{
+				items = {"default:stick"},
+				rarity = 2,
+			}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
