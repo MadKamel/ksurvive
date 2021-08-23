@@ -13,7 +13,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "shapeless,
-	output = "metals:glowing_bronze_block 4",
+	output = "foodstuff:green_teabag",
 	recipe = {
 		{"foodstuff:empty_teabag", "foodstuff:green_tea_dust"}
 	}
@@ -25,6 +25,16 @@ minetest.register_craft({
 	recipe = {
 		{"metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_copper_block"}
 	}
+})
+
+minetest.register_craft({
+	output = "foodstuff:ground_bush_leaf",
+	recipe = {
+		{"foodstuff:marble_pestle"},
+		{"nature:bush_leaf"},
+		{"foodstuff:marble_mortar"},
+	},
+	replacements = {{"foodstuff:marble_mortar", "foodstuff:marble_mortar"}, {"foodstuff:marble_pestle", "foodstuff:marble_pestle"}}
 })
 
 minetest.register_craft({
