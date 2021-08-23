@@ -2,7 +2,22 @@
 
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
+minetest.register_craft({
+	output = "foodstuff:empty_teabag",
+	recipe = {
+		{"", "default:paper", ""},
+		{"default:paper", "", "default:paper"},
+		{"default:paper", "default:paper", "default:paper"},
+	}
+})
 
+minetest.register_craft({
+	type = "shapeless,
+	output = "metals:glowing_bronze_block 4",
+	recipe = {
+		{"foodstuff:empty_teabag", "foodstuff:green_tea_dust"}
+	}
+})
 
 minetest.register_craft({
 	type = "shapeless,
