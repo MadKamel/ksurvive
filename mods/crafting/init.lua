@@ -1007,13 +1007,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:stick",
-	recipe = {
-		{"group:leaves","group:leaves"}
-	}
-})
-
-minetest.register_craft({
 	output = "rocks:sharpened_rock",
 	recipe = {
 		{"rocks:rock","rocks:rock"}

@@ -530,6 +530,11 @@ minetest.register_node("default:leaves", {
 				rarity = 20,
 			},
 			{
+				-- player will get sticks with 1/4 chance
+				items = {"default:stick"},
+				rarity = 4,
+			},
+			{
 				-- player will get leaves only if he get no saplings,
 				-- this is because max_items is 1
 				items = {"default:leaves"},
