@@ -132,3 +132,31 @@ minetest.register_node("rocks:marble_cobble", {
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 })
+
+minetest.register_node("rocks:oil_shale_cobble_burning", {
+	description = "Burning Oil Shale Cobble",
+	light_source = 11,
+	tiles = {
+		{
+			name = "oil_shale_burning_cobble_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1,
+			},
+		},
+		{
+			name = "oil_shale_burning_cobble_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1,
+			},
+		},
+	},
+	groups = {cracky = 3, stone = 2, igniter = 1},
+})
