@@ -163,6 +163,7 @@ minetest.register_node("rocks:oil_shale_cobble_burning", {
 
 minetest.register_abm({
 	nodenames = {"rocks:oil_shale_cobble"},
+	neighbors = {"group:igniter"}
 	interval = 1,
 	chance = 10,
 	action = function(pos, node, active_object_count, active_object_count_wider)
