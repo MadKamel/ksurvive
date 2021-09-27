@@ -1,4 +1,4 @@
-Copyright for mods bucket, default 2010-2012 celeron55, Perttu Ahola <celeron55@gmail.com> (screw this prick)
+Copyright for mods bucket, default, flowers 2010-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 Copyright 2021 MadKamel <rustrumek@gmail.com>
 

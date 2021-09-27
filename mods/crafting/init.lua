@@ -3,38 +3,9 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
-	output = "foodstuff:empty_teabag",
-	recipe = {
-		{"", "default:paper", ""},
-		{"default:paper", "", "default:paper"},
-		{"default:paper", "default:paper", "default:paper"},
-	}
-})
-
-minetest.register_craft({
-	type = "shapeless,
-	output = "foodstuff:green_teabag",
-	recipe = {
-		{"foodstuff:empty_teabag", "foodstuff:green_tea_dust"}
-	}
-})
-
-minetest.register_craft({
-	type = "shapeless,
+	type = "shapeless",
 	output = "metals:glowing_bronze_block 4",
-	recipe = {
-		{"metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_copper_block"}
-	}
-})
-
-minetest.register_craft({
-	output = "foodstuff:ground_bush_leaf",
-	recipe = {
-		{"foodstuff:marble_pestle"},
-		{"nature:bush_leaf"},
-		{"foodstuff:marble_mortar"},
-	},
-	replacements = {{"foodstuff:marble_mortar", "foodstuff:marble_mortar"}, {"foodstuff:marble_pestle", "foodstuff:marble_pestle"}}
+	recipe = {"metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_copper_block"}
 })
 
 minetest.register_craft({
@@ -360,51 +331,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "metals:tongs_gold",
-	recipe = {
-		{"metals:gold_stick", "", "metals:gold_stick"},
-		{"", "metals:gold_stick", ""},
-		{"metals:gold_stick", "", "metals:gold_stick"},
-	}
-})
-
-minetest.register_craft({
-	output = "metals:tongs_bronze",
-	recipe = {
-		{"metals:bronze_stick", "", "metals:bronze_stick"},
-		{"", "metals:bronze_stick", ""},
-		{"metals:bronze_stick", "", "metals:bronze_stick"},
-	}
-})
-
-minetest.register_craft({
-	output = "metals:tongs_tin",
-	recipe = {
-		{"metals:tin_stick", "", "metals:tin_stick"},
-		{"", "metals:tin_stick", ""},
-		{"metals:tin_stick", "", "metals:tin_stick"},
-	}
-})
-
-minetest.register_craft({
-	output = "metals:tongs_copper",
-	recipe = {
-		{"metals:copper_stick", "", "metals:copper_stick"},
-		{"", "metals:copper_stick", ""},
-		{"metals:copper_stick", "", "metals:copper_stick"},
-	}
-})
-
-minetest.register_craft({
-	output = "metals:tongs_iron",
-	recipe = {
-		{"metals:iron_stick", "", "metals:iron_stick"},
-		{"", "metals:iron_stick", ""},
-		{"metals:iron_stick", "", "metals:iron_stick"},
-	}
-})
-
-minetest.register_craft({
 	output = "metals:scythe_tin",
 	recipe = {
 		{"metals:tin_stick", "metals:tin_stick"},
@@ -455,22 +381,6 @@ minetest.register_craft({
 		{"metals:iron_stick", "metals:iron_stick"},
 		{"", "metals:iron_stick"},
 		{"", "metals:iron_stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "metals:gold_stick 8",
-	recipe = {
-		{"metals:gold_block"},
-		{"metals:gold_block"}
-	}
-})
-
-minetest.register_craft({
-	output = "metals:bronze_stick 8",
-	recipe = {
-		{"metals:bronze_block"},
-		{"metals:bronze_block"}
 	}
 })
 
@@ -744,15 +654,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "metals:raw_gold_block",
-	recipe = {
-		{"default:gold_lump","default:gold_lump","default:gold_lump"},
-		{"default:gold_lump","default:gold_lump","default:gold_lump"},
-		{"default:gold_lump","default:gold_lump","default:gold_lump"}
-	}
-})
-
-minetest.register_craft({
 	output = "metals:raw_tin_block",
 	recipe = {
 		{"default:tin_lump","default:tin_lump","default:tin_lump"},
@@ -945,51 +846,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "adze:iron_adze",
-	recipe = {
-		{"metals:iron_stick", "default:stick"},
-		{"", "default:stick"},
-		{"", "default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "adze:copper_adze",
-	recipe = {
-		{"metals:copper_stick", "default:stick"},
-		{"", "default:stick"},
-		{"", "default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "adze:tin_adze",
-	recipe = {
-		{"metals:tin_stick", "default:stick"},
-		{"", "default:stick"},
-		{"", "default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "adze:gold_adze",
-	recipe = {
-		{"metals:gold_stick", "default:stick"},
-		{"", "default:stick"},
-		{"", "default:stick"}
-	}
-})
-
-minetest.register_craft({
-	output = "adze:bronze_adze",
-	recipe = {
-		{"metals:bronze_stick", "default:stick"},
-		{"", "default:stick"},
-		{"", "default:stick"}
-	}
-})
-
 --minetest.register_craft({
 --	output = "foodstuff:stewed_mushroom_brown",
 --	recipe = {
@@ -1153,7 +1009,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "default:stick",
 	recipe = {
-		{"default:leaves","default:leaves"}
+		{"group:leaves","group:leaves"}
 	}
 })
 

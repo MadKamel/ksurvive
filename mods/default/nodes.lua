@@ -522,26 +522,17 @@ minetest.register_node("default:leaves", {
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 3,
+		max_items = 1,
 		items = {
 			{
+				-- player will get sapling with 1/20 chance
 				items = {"default:sapling"},
 				rarity = 20,
 			},
 			{
-				items = {"nature:leaf 4"},
-			},
-			{
-				items = {"nature:leaf"},
-				rarity = 2,
-			},
-			{
-				items = {"nature:leaf"},
-				rarity = 4,
-			},
-			{
-				items = {"default:stick"},
-				rarity = 2,
+				-- player will get leaves only if he get no saplings,
+				-- this is because max_items is 1
+				items = {"default:leaves"},
 			}
 		}
 	},
@@ -563,9 +554,8 @@ minetest.register_node("default:apple", {
 		type = "fixed",
 		fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
 	},
-	groups = {snappy = 3, dig_immediate = 3, flammable = 2,
-		leafdecay = 3, leafdecay_drop = 1, food_apple = 1, falling_node = 1},	
-	drop = "foodstuff:apple",
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
+		leafdecay = 3, leafdecay_drop = 1, food_apple = 1, falling_node = 1},
 	on_use = minetest.item_eat(2),
 	sounds = default.node_sound_leaves_defaults(),
 
@@ -785,7 +775,7 @@ minetest.register_node("default:bush_stem", {
 	wield_image = "default_bush_stem.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	groups = {choppy = 2, flammable = 2, falling_node = 1},
+	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2, falling_node = 1},
 	sounds = default.node_sound_wood_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -800,27 +790,10 @@ minetest.register_node("default:bush_leaves", {
 	paramtype = "light",
 	groups = {snappy = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 3,
+		max_items = 1,
 		items = {
-			{
-				items = {"default:bush_sapling"},
-				rarity = 20,
-			},
-			{
-				items = {"nature:bush_leaf 4"},
-			},
-			{
-				items = {"nature:bush_leaf"},
-				rarity = 2,
-			},
-			{
-				items = {"nature:bush_leaf"},
-				rarity = 4,
-			},
-			{
-				items = {"default:stick"},
-				rarity = 2,
-			}
+			{items = {"default:bush_sapling"}, rarity = 5},
+			{items = {"default:bush_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
@@ -886,27 +859,10 @@ minetest.register_node("default:blueberry_bush_leaves", {
 	paramtype = "light",
 	groups = {snappy = 3, flammable = 2, leaves = 1},
 	drop = {
-		max_items = 3,
+		max_items = 1,
 		items = {
-			{
-				items = {"default:blueberry_bush_sapling"},
-				rarity = 20,
-			},
-			{
-				items = {"nature:blueberry_bush_leaf 4"},
-			},
-			{
-				items = {"nature:blueberry_bush_leaf"},
-				rarity = 2,
-			},
-			{
-				items = {"nature:blueberry_bush_leaf"},
-				rarity = 4,
-			},
-			{
-				items = {"default:stick"},
-				rarity = 2,
-			}
+			{items = {"default:blueberry_bush_sapling"}, rarity = 5},
+			{items = {"default:blueberry_bush_leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
