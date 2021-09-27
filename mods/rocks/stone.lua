@@ -160,3 +160,13 @@ minetest.register_node("rocks:oil_shale_cobble_burning", {
 	},
 	groups = {cracky = 3, stone = 2, igniter = 1},
 })
+
+minetest.register_abm({
+	nodenames = {"rocks:oil_shale_cobble"},
+	interval = 1,
+	chance = 10,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "rocks:oil_shale_cobble_burning"})
+	end
+})
