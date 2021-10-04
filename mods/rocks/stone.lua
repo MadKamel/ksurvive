@@ -43,6 +43,21 @@ minetest.register_node("rocks:oil_shale_cobble", {
 	groups = {cracky = 3, stone = 2},
 })
 
+minetest.register_node("rocks:shale", {
+	description = "Shale",
+	tiles = {"shale_Stone.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "rocks:oil_shale_cobble",
+	legacy_mineral = true,
+})
+
+minetest.register_node("rocks:shale_cobble", {
+	description = "Shale Cobblestone",
+	tiles = {"oil_shale_cobble_depleted.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+})
+
 minetest.register_node("rocks:granite", {
 	description = "Granite",
 	tiles = {"granite_stone.png"},
@@ -169,5 +184,26 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local pos = {x = pos.x, y = pos.y, z = pos.z}
 		minetest.set_node(pos, {name = "rocks:oil_shale_cobble_burning"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"rocks:oil_shale_cobble_burning"},
+	neighbors = {"group:water"},
+	interval = 1,
+	chance = 10,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "rocks:shale_cobble"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"rocks:oil_shale_cobble_burning"},
+	interval = 1,
+	chance = 10,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local pos = {x = pos.x, y = pos.y, z = pos.z}
+		minetest.set_node(pos, {name = "rocks:shale_cobble"})
 	end
 })
