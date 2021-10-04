@@ -45,7 +45,7 @@ minetest.register_node("rocks:oil_shale_cobble", {
 
 minetest.register_node("rocks:shale", {
 	description = "Shale",
-	tiles = {"shale_Stone.png"},
+	tiles = {"shale_stone.png"},
 	groups = {cracky = 3, stone = 1},
 	drop = "rocks:oil_shale_cobble",
 	legacy_mineral = true,
