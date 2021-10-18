@@ -3,6 +3,52 @@
 -- This is the crafting recipe listing for EVERY ksurvive subgame mod. Trying to disable one of them won't work, as there are no checks to see if the mods are actually installed.
 
 minetest.register_craft({
+	output = "metals:tongs_gold",
+	recipe = {
+		{"metals:gold_stick", "", "metals:gold_stick"},
+		{"", "metals:gold_stick", ""},
+		{"metals:gold_stick", "", "metals:gold_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_bronze",
+	recipe = {
+		{"metals:bronze_stick", "", "metals:bronze_stick"},
+		{"", "metals:bronze_stick", ""},
+		{"metals:bronze_stick", "", "metals:bronze_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_tin",
+	recipe = {
+		{"metals:tin_stick", "", "metals:tin_stick"},
+		{"", "metals:tin_stick", ""},
+		{"metals:tin_stick", "", "metals:tin_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_copper",
+	recipe = {
+		{"metals:copper_stick", "", "metals:copper_stick"},
+		{"", "metals:copper_stick", ""},
+		{"metals:copper_stick", "", "metals:copper_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "metals:tongs_iron",
+	recipe = {
+		{"metals:iron_stick", "", "metals:iron_stick"},
+		{"", "metals:iron_stick", ""},
+		{"metals:iron_stick", "", "metals:iron_stick"},
+	}
+})
+
+
+minetest.register_craft({
 	type = "shapeless",
 	output = "metals:glowing_bronze_block 4",
 	recipe = {"metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_tin_block", "metals:glowing_copper_block"}
