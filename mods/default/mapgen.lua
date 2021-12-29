@@ -828,7 +828,7 @@ function default.register_biomes()
 		--node_dungeon_alt = "default:mossycobble",
 		--node_dungeon_stair = "stairs:stair_cobble",
 		y_max = 31000,
-		y_min = 68,
+		y_min = 58,
 		heat_point = 55,
 		humidity_point = 35,
 	})
