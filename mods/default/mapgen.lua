@@ -1171,6 +1171,32 @@ function default.register_decorations()
 		decoration = "nature:juncus",
 	})
 
+	minetest.register_decoration({
+		name = "default:nobelisk",
+		deco_type = "schematic",
+		place_on = {"default:sand"},
+		sidelen = 7,
+		fill_ratio = 0.0005,
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("rocks") .. "/schematics/nobelisk_tin.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "default:nobelisk_desert",
+		deco_type = "schematic",
+		place_on = {"default:desert_sand"},
+		sidelen = 7,
+		fill_ratio = 0.005,
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("rocks") .. "/schematics/nobelisk_tin.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
 	-- Apple tree and log
 
 	minetest.register_decoration({
