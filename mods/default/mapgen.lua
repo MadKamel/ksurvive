@@ -1189,7 +1189,7 @@ function default.register_decorations()
 		deco_type = "schematic",
 		place_on = {"default:desert_sand"},
 		sidelen = 7,
-		fill_ratio = 0.005,
+		fill_ratio = 0.0001,
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("rocks") .. "/schematics/nobelisk_tin.mts",
