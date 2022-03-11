@@ -736,6 +736,7 @@ minetest.register_node("default:papyrus", {
 	inventory_image = "default_papyrus.png",
 	wield_image = "default_papyrus.png",
 	paramtype = "light",
+	floodable = true,
 	sunlight_propagates = true,
 	walkable = false,
 	selection_box = {

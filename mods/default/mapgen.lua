@@ -1073,14 +1073,7 @@ function default.register_mgv6_decorations()
 		deco_type = "simple",
 		place_on = {"default:silver_sand", "default:sand"},
 		sidelen = 16,
-		noise_params = {
-			offset = 0,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
-		},
+		fill_ratio = 0.1,
 		y_max = 1,
 		y_min = 1,
 		decoration = "nature:juncus",
@@ -1091,45 +1084,11 @@ function default.register_mgv6_decorations()
 	minetest.register_decoration({
 		name = "default:papyrus",
 		deco_type = "simple",
-		place_on = {"default:silver_sand"},
+		place_on = {"default:silver_sand", "default:sand"},
 		sidelen = 16,
-		noise_params = {
-			offset = -0.3,
-			scale = 0.7,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 354,
-			octaves = 3,
-			persist = 0.7
-		},
 		y_max = 1,
-		y_min = 1,
+		y_min = -1,
 		decoration = "default:papyrus",
-		height = 4,
-		height_max = 7,
-		spawn_by = "default:water_source",
-		num_spawn_by = 6,
-	})
-
-	minetest.register_decoration({
-		name = "default:papyrus",
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.3,
-			scale = 0.7,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 354,
-			octaves = 3,
-			persist = 0.7
-		},
-		y_max = 1,
-		y_min = 1,
-		decoration = "default:papyrus",
-		height = 3,
-		height_max = 6,
-		spawn_by = "default:water_source",
-		num_spawn_by = 5,
 	})
 
 	-- Cacti
