@@ -272,22 +272,6 @@ minetest.register_tool("metals:hammer_copper", {
 	groups = {}
 })
 
-minetest.register_tool("metals:hammer_copper", {
-	description = "Wrought Copper Hammer",
-	inventory_image = "tool_copper_hammer.png",
-	wield_image = "tool_copper_hammer.png",
-	tool_capabilities = {
-		full_punch_interval = 1.5,
-		max_drop_level=1,
-		damage_groups = {fleshy=5},
-		groupcaps={
-			smashy = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=50, maxlevel=2},
-		},
-	},
-	sound = {breaks = "default_tool_breaks"},
-	groups = {}
-})
-
 minetest.register_tool("metals:hammer_tin", {
 	description = "Wrought Tin Hammer",
 	inventory_image = "tool_tin_hammer.png",
