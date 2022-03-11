@@ -191,7 +191,7 @@ minetest.register_node("nature:juncus_3", {
 })
 
 minetest.register_node("nature:juncus", {
-	description = "Mature Juncus Grass",
+	description = "Mature Juncus Rushes",
 	drawtype = "plantlike",
 	waving = 1,
 	tiles = {"juncus_4.png"},

@@ -386,7 +386,7 @@ minetest.register_node("nature:rudbeckia_hirta_4", {
 })
 
 minetest.register_node("nature:rudbeckia_hirta_picked", {
-	description = "Picked Rudbeckia",
+	description = "Picked Rudbeckia Hirtia",
 	drawtype = "plantlike",
 	waving = 1,
 	tiles = {"rudbeckia_hirta_picked.png"},

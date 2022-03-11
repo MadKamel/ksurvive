@@ -997,6 +997,42 @@ function default.register_mgv6_decorations()
 	})
 
 	minetest.register_decoration({
+		name = "default:rudbeckia_hirtia",
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 28,
+		y_min = 1,
+		decoration = "nature:rudbeckia_hirtia_4",
+	})
+
+	minetest.register_decoration({
+		name = "default:chuparosa",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0,
+			scale = 0.007,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 28,
+		y_min = 1,
+		decoration = "nature:chuparosa_4",
+	})
+
+	minetest.register_decoration({
 		name = "default:bouteloua",
 		deco_type = "simple",
 		place_on = {"default:desert_sand", "default:sand"},
@@ -1055,7 +1091,7 @@ function default.register_mgv6_decorations()
 	minetest.register_decoration({
 		name = "default:papyrus",
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:silver_sand"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.3,
@@ -1068,10 +1104,32 @@ function default.register_mgv6_decorations()
 		y_max = 1,
 		y_min = 1,
 		decoration = "default:papyrus",
-		height = 2,
-		height_max = 4,
+		height = 4,
+		height_max = 7,
 		spawn_by = "default:water_source",
-		num_spawn_by = 1,
+		num_spawn_by = 6,
+	})
+
+	minetest.register_decoration({
+		name = "default:papyrus",
+		deco_type = "simple",
+		place_on = {"default:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.3,
+			scale = 0.7,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 354,
+			octaves = 3,
+			persist = 0.7
+		},
+		y_max = 1,
+		y_min = 1,
+		decoration = "default:papyrus",
+		height = 3,
+		height_max = 6,
+		spawn_by = "default:water_source",
+		num_spawn_by = 5,
 	})
 
 	-- Cacti

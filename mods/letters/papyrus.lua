@@ -6,7 +6,7 @@ minetest.register_node("letters:papyrus_bundle", {
 	wield_image = "bundle_papyrus.png",
 	description = "Bundled Papyrus",
 	groups = {snappy = 3},
-	walkable = true,
+	walkable = false,
 	climbable = true,
 	is_ground_content = false
 })
