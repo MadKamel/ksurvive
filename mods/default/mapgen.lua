@@ -602,6 +602,18 @@ function default.register_ores()
 				"deciduous_forest", "deciduous_forest_shore", "rainforest",
 				"rainforest_swamp"}
 	})
+	
+	-- Salt
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "foodstuff:salt_gen",
+		wherein        = "default:silver_sand",
+		clust_scarcity = 12 * 12 * 12,
+		clust_num_ores = 15,
+		clust_size     = 4,
+		y_max          = 31000,
+		y_min          = -31000,
+	})
 
 	-- Gravel
 
